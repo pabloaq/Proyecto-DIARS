@@ -41,6 +41,7 @@ namespace CapaPresentacion
         {
             if (txtPassword.Text == "Password")
             {
+                txtPassword.UseSystemPasswordChar = true;
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
             }
@@ -50,9 +51,15 @@ namespace CapaPresentacion
         {
             if (txtPassword.Text == "")
             {
+                txtPassword.UseSystemPasswordChar = false;
                 txtPassword.ForeColor = Color.Silver;
                 txtPassword.Text = "Password";
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

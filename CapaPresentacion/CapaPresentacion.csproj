@@ -209,6 +209,8 @@
     <None Include="Resources\imagenPedido1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\borrar.png" />
+    <None Include="Resources\minimizar.png" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
     <Content Include="Resources\profile.png" />
