@@ -126,7 +126,7 @@ namespace CapaPresentacion
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(432, 304);
+            this.btnLogin.Location = new System.Drawing.Point(453, 308);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(196, 44);
             this.btnLogin.TabIndex = 5;
