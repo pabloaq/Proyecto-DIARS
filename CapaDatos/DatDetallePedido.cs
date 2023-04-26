@@ -23,6 +23,6 @@ namespace CapaDatos
 
         #region Metodos
 
-        #endregion metodos
+        #endregion Metodos
     }
 }

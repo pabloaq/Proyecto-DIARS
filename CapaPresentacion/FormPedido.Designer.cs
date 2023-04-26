@@ -225,7 +225,7 @@
             this.btnAumentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAumentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAumentar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAumentar.Location = new System.Drawing.Point(11, 133);
+            this.btnAumentar.Location = new System.Drawing.Point(173, 133);
             this.btnAumentar.Name = "btnAumentar";
             this.btnAumentar.Size = new System.Drawing.Size(68, 24);
             this.btnAumentar.TabIndex = 23;
@@ -242,7 +242,7 @@
             this.btnDisminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisminuir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisminuir.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDisminuir.Location = new System.Drawing.Point(173, 133);
+            this.btnDisminuir.Location = new System.Drawing.Point(11, 133);
             this.btnDisminuir.Name = "btnDisminuir";
             this.btnDisminuir.Size = new System.Drawing.Size(68, 24);
             this.btnDisminuir.TabIndex = 22;

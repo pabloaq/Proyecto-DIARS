@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaDatos
+namespace CapaLogica
 {
-    public class DatPedido
+    public class LogDetallePedido
     {
         #region Patron Sigleton
         //Variable estática para la instancia
         //privado para evitar la instanciación directa
-        private static readonly DatPedido _instancia = new DatPedido();
-        public static DatPedido Instancia
+        private static readonly LogDetallePedido _instancia = new LogDetallePedido();
+        public static LogDetallePedido Instancia
         {
             get
             {
-                return DatPedido._instancia;
+                return LogDetallePedido._instancia;
             }
         }
         #endregion Patron Sigleton
@@ -24,6 +24,5 @@ namespace CapaDatos
         #region Metodos
 
         #endregion Metodos
-
     }
 }
