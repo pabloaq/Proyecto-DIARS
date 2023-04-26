@@ -76,12 +76,6 @@
     <Compile Include="FormCategoriaMetodoPago.Designer.cs">
       <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetallePedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDetallePedido.Designer.cs">
-      <DependentUpon>FormDetallePedido.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCategoriaMetodoPago.resx">
       <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDetallePedido.resx">
-      <DependentUpon>FormDetallePedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formComprobantePago.resx">
       <DependentUpon>formComprobantePago.cs</DependentUpon>
