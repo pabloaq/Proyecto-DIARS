@@ -211,6 +211,7 @@
   <ItemGroup>
     <None Include="Resources\borrar.png" />
     <None Include="Resources\minimizar.png" />
+    <None Include="Resources\imgLogopng.png" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
     <Content Include="Resources\profile.png" />
