@@ -55,7 +55,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnAumentar = new System.Windows.Forms.Button();
             this.btnDisminuir = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbCantidadProducto = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -326,6 +326,7 @@
             this.btnRegistrarPedido.TabIndex = 9;
             this.btnRegistrarPedido.Text = "Registrar";
             this.btnRegistrarPedido.UseVisualStyleBackColor = false;
+            this.btnRegistrarPedido.Click += new System.EventHandler(this.btnRegistrarPedido_Click);
             // 
             // label4
             // 
@@ -373,7 +374,7 @@
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.btnAumentar);
             this.panel7.Controls.Add(this.btnDisminuir);
-            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.lbCantidadProducto);
             this.panel7.Controls.Add(this.textBox3);
             this.panel7.Controls.Add(this.btnEliminar);
             this.panel7.Controls.Add(this.label8);
@@ -402,6 +403,7 @@
             this.btnAumentar.TabIndex = 23;
             this.btnAumentar.Text = "+";
             this.btnAumentar.UseVisualStyleBackColor = false;
+            this.btnAumentar.Click += new System.EventHandler(this.btnAumentar_Click);
             // 
             // btnDisminuir
             // 
@@ -418,18 +420,19 @@
             this.btnDisminuir.TabIndex = 22;
             this.btnDisminuir.Text = "-";
             this.btnDisminuir.UseVisualStyleBackColor = false;
+            this.btnDisminuir.Click += new System.EventHandler(this.btnDisminuir_Click);
             // 
-            // label10
+            // lbCantidadProducto
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(113, 143);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 24);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "1";
+            this.lbCantidadProducto.AutoSize = true;
+            this.lbCantidadProducto.BackColor = System.Drawing.Color.Transparent;
+            this.lbCantidadProducto.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidadProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbCantidadProducto.Location = new System.Drawing.Point(113, 143);
+            this.lbCantidadProducto.Name = "lbCantidadProducto";
+            this.lbCantidadProducto.Size = new System.Drawing.Size(22, 24);
+            this.lbCantidadProducto.TabIndex = 21;
+            this.lbCantidadProducto.Text = "1";
             // 
             // textBox3
             // 
@@ -630,7 +633,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAumentar;
         private System.Windows.Forms.Button btnDisminuir;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbCantidadProducto;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
