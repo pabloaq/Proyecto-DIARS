@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MantenedorProducto;
+using System;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -13,7 +14,7 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPedido());
+            Application.Run(new FormProducto());
         }
     }
 }

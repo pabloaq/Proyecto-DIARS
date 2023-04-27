@@ -214,6 +214,7 @@
     <None Include="Resources\imgLogopng.png" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
+    <None Include="Resources\producto.jpg" />
     <Content Include="Resources\profile.png" />
     <Content Include="Resources\user.png" />
   </ItemGroup>
