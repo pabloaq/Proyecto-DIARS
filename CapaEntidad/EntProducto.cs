@@ -12,7 +12,7 @@ namespace CapaEntidad
         public string IdCategoriaProducto { get; set; }
         public string Nombre { get;set; }
         public int Stock { get; set; }
-        public double PrecioUnitario { get; set; }
-        public DateTime FechaDeCaducidad { get; set;}
+        public float PrecioUnitario { get; set; }
+        public DateTime FechaCaducidad { get; set; }
     }
 }

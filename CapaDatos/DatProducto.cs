@@ -44,8 +44,8 @@ namespace CapaDatos
                     producto.IdCategoriaProducto = Convert.ToString(dr["IdCategoriaProducto"]);
                     producto.Nombre = Convert.ToString(dr["Nombre"]);
                     producto.Stock = Convert.ToInt32(dr["Stock"]);
-                    producto.PrecioUnitario = Convert.ToDouble(dr["PrecioUnitario"]);
-                    producto.FechaDeCaducidad = Convert.ToDateTime(dr["FechaCaducidad"]);
+                    producto.PrecioUnitario = float.Parse(Convert.ToString(dr["PrecioUnitario"]));
+                    producto.FechaCaducidad = Convert.ToDateTime(dr["FechaCaducidad"] is DBNull ? null : dr["FechaCaducidad"]);
 
                     lista.Add(producto);
                 }

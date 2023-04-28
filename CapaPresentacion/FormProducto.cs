@@ -1,5 +1,5 @@
-﻿//using CapaEntidad;
-//using CapaLogica;
+﻿using CapaEntidad;
+using CapaLogica;
 using System;
 using System.Windows.Forms;
 
@@ -10,6 +10,12 @@ namespace MantenedorProducto
         public FormProducto()
         {
             InitializeComponent();
+            listaProductos();
+        }
+
+        private void listaProductos()
+        {
+            dgv_listaProductos.DataSource = LogProducto.Instancia.ListarProducto();
         }
 
         private void dgv_listaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
