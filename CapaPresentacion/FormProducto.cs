@@ -26,6 +26,7 @@ namespace MantenedorProducto
                 DataGridViewRow filaActual = dgv_listaProductos.Rows[e.RowIndex];
 
                 //cbCategoria.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString()) - 1;
+                txtIdProducto.Text = filaActual.Cells[0].Value.ToString();
                 cbCategoria.Text = filaActual.Cells[1].Value.ToString();
                 txtNombre.Text = filaActual.Cells[2].Value.ToString();
                 txtStock.Text = filaActual.Cells[3].Value.ToString();
@@ -42,6 +43,7 @@ namespace MantenedorProducto
 
         private void limpiarVariables()
         {
+            txtIdProducto.Text = "";
             //cbCategoria.SelectedIndex = 0;
             cbCategoria.Text = "";
             txtNombre.Text = "";
@@ -55,11 +57,6 @@ namespace MantenedorProducto
         private void btn_Limpiar_Click(object sender, EventArgs e)
         {
             limpiarVariables();
-        }
-
-        private void btnHabilitar_Click(object sender, EventArgs e)
-        {
-            dt_fechaCaducidad.Enabled = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -79,6 +76,57 @@ namespace MantenedorProducto
                     LogProducto.Instancia.insertarProducto(producto);
                 } else
                     MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            limpiarVariables();
+            listaProductos();
+        }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            dt_fechaCaducidad.Enabled = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNombre.Text != "" && txtPrecio.Text != "" && txtStock.Text != "")
+                {
+                    EntProducto producto = new EntProducto();
+
+                    producto.IdProducto = txtIdProducto.Text;
+                    producto.IdCategoriaProducto = cbCategoria.Text;//cambiar por el value
+                    producto.Nombre = txtNombre.Text;
+                    producto.PrecioUnitario = int.Parse(txtPrecio.Text);
+                    producto.Stock = int.Parse(txtStock.Text);
+                    producto.FechaCaducidad = dt_fechaCaducidad.Value;
+
+                    LogProducto.Instancia.modificarProducto(producto);
+                }
+                else
+                    MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            limpiarVariables();
+            listaProductos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EntProducto producto = new EntProducto();
+
+                producto.IdProducto = txtIdProducto.Text;
+
+                LogProducto.Instancia.eliminarProducto(producto);
             }
             catch (Exception ex)
             {

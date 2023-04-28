@@ -95,6 +95,69 @@ namespace CapaDatos
             return inserta;
         }
 
+        public bool ModificarProducto(EntProducto Producto)
+        {
+            SqlCommand cmd = null;
+            bool modificado = false;
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spModificarProducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdProducto", Producto.IdProducto);
+                cmd.Parameters.AddWithValue("@IdCategoriaProducto", Producto.IdCategoriaProducto);
+                cmd.Parameters.AddWithValue("@Nombre", Producto.Nombre);
+                cmd.Parameters.AddWithValue("@Stock", Producto.Stock);
+                cmd.Parameters.AddWithValue("@PrecioUnitario", Producto.PrecioUnitario);
+                cmd.Parameters.AddWithValue("@FechaCaducidad", Producto.FechaCaducidad);
+
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    modificado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally { cmd.Connection.Close(); }
+
+            return modificado;
+        }
+
+        public bool EliminarProducto(EntProducto Producto)
+        {
+            SqlCommand cmd = null;
+            bool eliminado = false;
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spEliminarProducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdProducto", Producto.IdProducto);
+
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    eliminado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally { cmd.Connection.Close(); }
+
+            return eliminado;
+        }
+
         #endregion Metodos
     }
 }
