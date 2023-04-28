@@ -42,20 +42,20 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cb_Cod_Categoria = new System.Windows.Forms.ComboBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_stockProducto = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_nomProducto = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dt_fechaCaducidad = new System.Windows.Forms.DateTimePicker();
-            this.txt_PrecioUnitario = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnHabilitar = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -215,6 +215,7 @@
             this.btnAgregar.TabIndex = 17;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -237,31 +238,31 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.btnHabilitar);
-            this.panel2.Controls.Add(this.cb_Cod_Categoria);
+            this.panel2.Controls.Add(this.btnDeshabilitar);
+            this.panel2.Controls.Add(this.cbCategoria);
             this.panel2.Controls.Add(this.Nombre);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txt_stockProducto);
+            this.panel2.Controls.Add(this.txtStock);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txt_nomProducto);
+            this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.dt_fechaCaducidad);
-            this.panel2.Controls.Add(this.txt_PrecioUnitario);
+            this.panel2.Controls.Add(this.txtPrecio);
             this.panel2.Location = new System.Drawing.Point(9, 10);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(243, 379);
             this.panel2.TabIndex = 11;
             // 
-            // cb_Cod_Categoria
+            // cbCategoria
             // 
-            this.cb_Cod_Categoria.FormattingEnabled = true;
-            this.cb_Cod_Categoria.Location = new System.Drawing.Point(14, 30);
-            this.cb_Cod_Categoria.Margin = new System.Windows.Forms.Padding(2);
-            this.cb_Cod_Categoria.Name = "cb_Cod_Categoria";
-            this.cb_Cod_Categoria.Size = new System.Drawing.Size(211, 21);
-            this.cb_Cod_Categoria.TabIndex = 9;
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(14, 30);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(211, 21);
+            this.cbCategoria.TabIndex = 9;
             // 
             // Nombre
             // 
@@ -299,13 +300,13 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Stock";
             // 
-            // txt_stockProducto
+            // txtStock
             // 
-            this.txt_stockProducto.Location = new System.Drawing.Point(14, 124);
-            this.txt_stockProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_stockProducto.Name = "txt_stockProducto";
-            this.txt_stockProducto.Size = new System.Drawing.Size(77, 20);
-            this.txt_stockProducto.TabIndex = 5;
+            this.txtStock.Location = new System.Drawing.Point(14, 124);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(77, 20);
+            this.txtStock.TabIndex = 5;
             // 
             // label3
             // 
@@ -319,13 +320,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Fecha de Caducidad";
             // 
-            // txt_nomProducto
+            // txtNombre
             // 
-            this.txt_nomProducto.Location = new System.Drawing.Point(14, 78);
-            this.txt_nomProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_nomProducto.Name = "txt_nomProducto";
-            this.txt_nomProducto.Size = new System.Drawing.Size(211, 20);
-            this.txt_nomProducto.TabIndex = 3;
+            this.txtNombre.Location = new System.Drawing.Point(14, 78);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(211, 20);
+            this.txtNombre.TabIndex = 3;
             // 
             // label4
             // 
@@ -341,20 +342,19 @@
             // 
             // dt_fechaCaducidad
             // 
-            this.dt_fechaCaducidad.Enabled = false;
             this.dt_fechaCaducidad.Location = new System.Drawing.Point(14, 175);
             this.dt_fechaCaducidad.Margin = new System.Windows.Forms.Padding(2);
             this.dt_fechaCaducidad.Name = "dt_fechaCaducidad";
             this.dt_fechaCaducidad.Size = new System.Drawing.Size(211, 20);
             this.dt_fechaCaducidad.TabIndex = 6;
             // 
-            // txt_PrecioUnitario
+            // txtPrecio
             // 
-            this.txt_PrecioUnitario.Location = new System.Drawing.Point(148, 124);
-            this.txt_PrecioUnitario.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_PrecioUnitario.Name = "txt_PrecioUnitario";
-            this.txt_PrecioUnitario.Size = new System.Drawing.Size(77, 20);
-            this.txt_PrecioUnitario.TabIndex = 12;
+            this.txtPrecio.Location = new System.Drawing.Point(148, 124);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(77, 20);
+            this.txtPrecio.TabIndex = 12;
             // 
             // panel3
             // 
@@ -388,22 +388,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Av. España 1970. Trujillo. Peru";
             // 
-            // btnHabilitar
+            // btnDeshabilitar
             // 
-            this.btnHabilitar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnHabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnHabilitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHabilitar.FlatAppearance.BorderSize = 0;
-            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHabilitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHabilitar.Location = new System.Drawing.Point(14, 200);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(82, 26);
-            this.btnHabilitar.TabIndex = 18;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = false;
-            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
+            this.btnDeshabilitar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDeshabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnDeshabilitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeshabilitar.FlatAppearance.BorderSize = 0;
+            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(14, 200);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(82, 26);
+            this.btnDeshabilitar.TabIndex = 18;
+            this.btnDeshabilitar.Text = "Habilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = false;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
             // FormProducto
             // 
@@ -439,16 +439,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dt_fechaCaducidad;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.TextBox txt_stockProducto;
-        private System.Windows.Forms.TextBox txt_nomProducto;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Limpiar;
-        private System.Windows.Forms.ComboBox cb_Cod_Categoria;
+        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_PrecioUnitario;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAtras;
@@ -457,6 +457,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button btnDeshabilitar;
     }
 }

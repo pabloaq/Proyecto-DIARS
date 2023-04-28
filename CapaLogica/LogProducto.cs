@@ -32,6 +32,11 @@ namespace CapaLogica
             return DatProducto.Instancia.ListarProducto();
         }
 
+        public bool insertarProducto(EntProducto producto)
+        {
+            return DatProducto.Instancia.InsertarProducto(producto);
+        }
+
         #endregion Metodos
     }
 }

@@ -13,6 +13,6 @@ namespace CapaEntidad
         public string Nombre { get;set; }
         public int Stock { get; set; }
         public float PrecioUnitario { get; set; }
-        public DateTime FechaCaducidad { get; set; }
+        public DateTime? FechaCaducidad { get; set; }
     }
 }

@@ -62,6 +62,39 @@ namespace CapaDatos
             return lista;
         }
 
+        public bool InsertarProducto(EntProducto Producto)
+        {
+            SqlCommand cmd = null;
+            bool inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spInsertarProducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdCategoriaProducto", Producto.IdCategoriaProducto);
+                cmd.Parameters.AddWithValue("@Nombre", Producto.Nombre);
+                cmd.Parameters.AddWithValue("@Stock", Producto.Stock);
+                cmd.Parameters.AddWithValue("@PrecioUnitario", Producto.PrecioUnitario);
+                cmd.Parameters.AddWithValue("@FechaCaducidad", Producto.FechaCaducidad);
+
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally { cmd.Connection.Close(); }
+
+            return inserta;
+        }
+
         #endregion Metodos
     }
 }
