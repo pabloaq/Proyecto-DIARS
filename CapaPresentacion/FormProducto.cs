@@ -28,5 +28,9 @@ namespace MantenedorProducto
             
         }
 
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            dt_fechaCaducidad.Enabled = true;
+        }
     }
 }
