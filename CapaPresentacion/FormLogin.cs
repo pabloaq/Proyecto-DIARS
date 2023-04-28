@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,9 @@ namespace CapaPresentacion
         public FormLogin()
         {
             InitializeComponent();
+            panel1.Controls.Add(logo);
+            logo.Location = new Point(2, 62);
+            logo.BackColor = Color.Transparent;
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
@@ -24,7 +28,7 @@ namespace CapaPresentacion
             if(txtUsername.Text == "Username")
             {
                 txtUsername.Text = "";
-                txtUsername.ForeColor = Color.Black;
+                txtUsername.ForeColor = Color.Silver;
             }
         }
 
@@ -41,9 +45,9 @@ namespace CapaPresentacion
         {
             if (txtPassword.Text == "Password")
             {
-                txtPassword.UseSystemPasswordChar = true;
                 txtPassword.Text = "";
-                txtPassword.ForeColor = Color.Black;
+                txtPassword.ForeColor = Color.Silver;
+                txtPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -51,15 +55,21 @@ namespace CapaPresentacion
         {
             if (txtPassword.Text == "")
             {
-                txtPassword.UseSystemPasswordChar = false;
-                txtPassword.ForeColor = Color.Silver;
                 txtPassword.Text = "Password";
+                txtPassword.ForeColor = Color.Silver;
+                txtPassword.UseSystemPasswordChar = false;
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+            
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

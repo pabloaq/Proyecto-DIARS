@@ -212,6 +212,7 @@
     <None Include="Resources\borrar.png" />
     <None Include="Resources\minimizar.png" />
     <None Include="Resources\imgLogopng.png" />
+    <None Include="Resources\cerrar.png" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
     <None Include="Resources\producto.jpg" />
