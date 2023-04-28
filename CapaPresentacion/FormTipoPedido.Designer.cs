@@ -49,7 +49,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(59)))), ((int)(((byte)(11)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(95)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSalir);
@@ -60,7 +60,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.panel2.Controls.Add(this.txtNombreTipoPedido);
             this.panel2.Controls.Add(this.txtIDTipoPedido);
             this.panel2.Controls.Add(this.dgvTipoPedido);
@@ -103,7 +103,7 @@
             // 
             // btnEliminarTipoPedido
             // 
-            this.btnEliminarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnEliminarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnEliminarTipoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnEliminarTipoPedido.Location = new System.Drawing.Point(801, 264);
             this.btnEliminarTipoPedido.Name = "btnEliminarTipoPedido";
@@ -116,11 +116,11 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblNombre.Location = new System.Drawing.Point(26, 111);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(203, 21);
+            this.lblNombre.Size = new System.Drawing.Size(276, 26);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre Tipo del Pedido";
             this.lblNombre.Click += new System.EventHandler(this.lblTipoPedido_Click);
@@ -128,18 +128,18 @@
             // lblTipoPedido
             // 
             this.lblTipoPedido.AutoSize = true;
-            this.lblTipoPedido.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPedido.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoPedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTipoPedido.Location = new System.Drawing.Point(26, 28);
             this.lblTipoPedido.Name = "lblTipoPedido";
-            this.lblTipoPedido.Size = new System.Drawing.Size(157, 21);
+            this.lblTipoPedido.Size = new System.Drawing.Size(211, 26);
             this.lblTipoPedido.TabIndex = 9;
             this.lblTipoPedido.Text = "ID Tipo del Pedido";
             this.lblTipoPedido.Click += new System.EventHandler(this.lblTipoPedido_Click);
             // 
             // btnModificarTipoPedido
             // 
-            this.btnModificarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnModificarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnModificarTipoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnModificarTipoPedido.Location = new System.Drawing.Point(295, 264);
             this.btnModificarTipoPedido.Name = "btnModificarTipoPedido";
@@ -151,7 +151,7 @@
             // 
             // btnAgregarTipoPedido
             // 
-            this.btnAgregarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnAgregarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnAgregarTipoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAgregarTipoPedido.Location = new System.Drawing.Point(66, 264);
             this.btnAgregarTipoPedido.Name = "btnAgregarTipoPedido";
@@ -174,7 +174,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnSalir.Location = new System.Drawing.Point(825, 356);
             this.btnSalir.Name = "btnSalir";
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 412);
+            this.ClientSize = new System.Drawing.Size(773, 329);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTipoPedido";
