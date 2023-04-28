@@ -44,6 +44,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DatDetallePedido.cs" />
     <Compile Include="DatPedido.cs" />
+    <Compile Include="datTipoPedido.cs" />
     <Compile Include="DatProducto.cs" />
     <Compile Include="datUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
