@@ -501,7 +501,6 @@
             // 
             // cmbTipoPedido
             // 
-            this.cmbTipoPedido.FormattingEnabled = true;
             this.cmbTipoPedido.Location = new System.Drawing.Point(35, 69);
             this.cmbTipoPedido.Name = "cmbTipoPedido";
             this.cmbTipoPedido.Size = new System.Drawing.Size(203, 21);
