@@ -56,6 +56,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDetPedido = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPedido = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -285,6 +288,7 @@
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label8
             // 
@@ -313,6 +317,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label11
             // 
@@ -353,6 +358,7 @@
             this.btnAgregar.TabIndex = 13;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cmbProducto
             // 
@@ -393,6 +399,7 @@
             this.btnRegistrarDP.TabIndex = 6;
             this.btnRegistrarDP.Text = "Registrar";
             this.btnRegistrarDP.UseVisualStyleBackColor = false;
+            this.btnRegistrarDP.Click += new System.EventHandler(this.btnRegistrarDP_Click);
             // 
             // pictureBox2
             // 
@@ -433,11 +440,37 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dgvDetPedido.Location = new System.Drawing.Point(6, 55);
             this.dgvDetPedido.Name = "dgvDetPedido";
             this.dgvDetPedido.ReadOnly = true;
             this.dgvDetPedido.Size = new System.Drawing.Size(467, 233);
             this.dgvDetPedido.TabIndex = 0;
+            this.dgvDetPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetPedido_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IdPedido";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 88;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "IdProducto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 101;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 88;
             // 
             // panelPedido
             // 
@@ -636,5 +669,8 @@
         private System.Windows.Forms.Label lbCantidadProducto;
         private System.Windows.Forms.TextBox txtNombreClienteDP;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

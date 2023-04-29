@@ -24,6 +24,10 @@ namespace CapaLogica
         #endregion Patron Sigleton
 
         #region Metodos
+        public List<EntPedido> ListarPedido()
+        {
+            return DatPedido.Instancia.ListarPedido();
+        }
         public bool InsertarPedido(EntPedido pedido)
         {
             return DatPedido.Instancia.InsertarPedido(pedido);
@@ -33,6 +37,11 @@ namespace CapaLogica
         {
             return DatPedido.Instancia.ModificarEstadoPedido(pedido);
         }
+
+        /*public EntPedido UltimoPedido()
+        {
+            return DatPedido.Instancia.UltimoPedido();
+        }*/
         #endregion Metodos
     }
 }

@@ -25,6 +25,43 @@ namespace CapaDatos
         #endregion Patron Sigleton
 
         #region Metodos
+        public List<EntPedido> ListarPedido()
+        {
+            SqlCommand cmd = null;
+            List<EntPedido> lista = new List<EntPedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spListarPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntPedido pedido = new EntPedido();
+
+                    pedido.idPedido = Convert.ToString(dr["IdPedido"]);
+                    pedido.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                    pedido.idTipoPedido = Convert.ToString(dr["IdTipoPedido"]);
+                    pedido.direccion = Convert.ToString(dr["Direccion"]);
+                    pedido.fechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+                    pedido.estado = Convert.ToChar(dr["Estado"]);
+
+                    lista.Add(pedido);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
         public bool InsertarPedido(EntPedido Pedido)
         {
             SqlCommand cmd = null;
@@ -85,6 +122,37 @@ namespace CapaDatos
 
             return modifico;
         }
+
+        /*public EntPedido UltimoPedido()
+        {
+            SqlCommand cmd = null;
+            EntPedido pedido = new EntPedido();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spMostrarUltimoPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                pedido.idPedido = Convert.ToString(dr["IdPedido"]);
+                pedido.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                pedido.idTipoPedido = Convert.ToString(dr["IdTipoPedido"]);
+                pedido.direccion = Convert.ToString(dr["Direccion"]);
+                //pedido.fechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+                pedido.estado = Convert.ToChar(dr["Estado"]);
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return pedido;
+        }*/
         #endregion Metodos
 
     }
