@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaEntidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,15 @@ namespace CapaLogica
         #endregion Patron Sigleton
 
         #region Metodos
+        public bool InsertarPedido(EntPedido pedido)
+        {
+            return DatPedido.Instancia.InsertarPedido(pedido);
+        }
 
+        public bool ModificarEstadoPedido(EntPedido pedido)
+        {
+            return DatPedido.Instancia.ModificarEstadoPedido(pedido);
+        }
         #endregion Metodos
     }
 }

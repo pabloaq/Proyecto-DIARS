@@ -1,5 +1,7 @@
-﻿using CapaLogica;
+﻿using CapaEntidad;
+using CapaLogica;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
@@ -20,7 +23,29 @@ namespace CapaPresentacion
         public FormPedido()
         {
             InitializeComponent();
+            listarComboBoxTipoPedido();       
+            listarComboBoxProducto();
             panelDetallePedido.Enabled = false;
+        }
+
+        private void listarComboBoxTipoPedido()
+        {
+            List<EntTipoPedido> lista = LogTipoPedido.Instancia.ListarTipoPedido();
+
+            foreach(EntTipoPedido tipoPedido in lista)
+            {
+                cmbTipoPedido.Items.Add(tipoPedido.nombreTipoPedido);
+            }
+        }
+
+        private void listarComboBoxProducto()
+        {
+            List<EntProducto> lista = LogProducto.Instancia.ListarProducto();
+
+            foreach (EntProducto producto in lista)
+            {
+                cmbProducto.Items.Add(producto.Nombre);
+            }
         }
 
         private void btnAumentar_Click(object sender, EventArgs e)
@@ -46,6 +71,14 @@ namespace CapaPresentacion
 
             panelDetallePedido.Enabled = true;
             panelPedido.Enabled = false;
+        }
+
+        private void cmbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoPedido.Text == "delivery")
+            {
+                txtDireccionPedido.Enabled = true;
+            } else txtDireccionPedido.Enabled = false;
         }
     }
 }
