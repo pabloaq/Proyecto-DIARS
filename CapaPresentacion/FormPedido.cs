@@ -18,7 +18,7 @@ namespace CapaPresentacion
     {
         private List<EntTipoPedido> listaTipoPedido = LogTipoPedido.Instancia.ListarTipoPedido();
         private List<EntProducto> listaProducto = LogProducto.Instancia.ListarProducto();
-        private List<EntPedido> listaPedido = LogPedido.Instancia.ListarPedido();
+        
         private int cantidadMaxProducto = 15;
         private int cantidadMinProducto = 1;
         private int cantidadProducto = 1;
@@ -110,10 +110,9 @@ namespace CapaPresentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             int celda = dgvDetPedido.Rows.Add();
+            List<EntPedido> listaPedido = LogPedido.Instancia.ListarPedido();
 
-            EntPedido ultimoDato = listaPedido[listaPedido.Count-1];//acomodar el indice del ultimo registro
-
-            dgvDetPedido.Rows[celda].Cells[0].Value = ultimoDato.idPedido.ToString();
+            dgvDetPedido.Rows[celda].Cells[0].Value = listaPedido[listaPedido.Count-1].idPedido.ToString();
             if (cmbProducto.SelectedIndex != -1)
             {
                 foreach (EntProducto producto in listaProducto)
