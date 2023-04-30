@@ -67,7 +67,7 @@ namespace MantenedorProducto
                 {
                     EntProducto producto = new EntProducto();
 
-                    producto.IdCategoriaProducto = cbCategoria.Text;//cambiar por el value
+                    producto.IdCategoriaProducto = cbCategoria.Text;
                     producto.Nombre = txtNombre.Text;
                     producto.PrecioUnitario = int.Parse(txtPrecio.Text);
                     producto.Stock = int.Parse(txtStock.Text);
@@ -99,7 +99,7 @@ namespace MantenedorProducto
                     EntProducto producto = new EntProducto();
 
                     producto.IdProducto = txtIdProducto.Text;
-                    producto.IdCategoriaProducto = cbCategoria.Text;//cambiar por el value
+                    producto.IdCategoriaProducto = cbCategoria.Text;
                     producto.Nombre = txtNombre.Text;
                     producto.PrecioUnitario = int.Parse(txtPrecio.Text);
                     producto.Stock = int.Parse(txtStock.Text);

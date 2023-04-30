@@ -43,26 +43,29 @@
             this.btnAumentar = new System.Windows.Forms.Button();
             this.btnDisminuir = new System.Windows.Forms.Button();
             this.lbCantidadProducto = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombreClienteDP = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cmbProductoId = new System.Windows.Forms.ComboBox();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnRegistrarDP = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDetPedido = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPedido = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDireccionPedido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
+            this.txtNombreClientePedido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegistrarPedido = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -113,6 +116,7 @@
             this.btnAtras.TabIndex = 0;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // pictureBox1
             // 
@@ -203,14 +207,14 @@
             this.panel7.Controls.Add(this.btnAumentar);
             this.panel7.Controls.Add(this.btnDisminuir);
             this.panel7.Controls.Add(this.lbCantidadProducto);
-            this.panel7.Controls.Add(this.textBox3);
+            this.panel7.Controls.Add(this.txtNombreClienteDP);
             this.panel7.Controls.Add(this.btnEliminar);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.btnModificar);
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.btnAgregar);
-            this.panel7.Controls.Add(this.cmbProductoId);
+            this.panel7.Controls.Add(this.cmbProducto);
             this.panel7.Location = new System.Drawing.Point(0, -1);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(255, 222);
@@ -262,13 +266,13 @@
             this.lbCantidadProducto.TabIndex = 21;
             this.lbCantidadProducto.Text = "1";
             // 
-            // textBox3
+            // txtNombreClienteDP
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(11, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 20);
-            this.textBox3.TabIndex = 20;
+            this.txtNombreClienteDP.Enabled = false;
+            this.txtNombreClienteDP.Location = new System.Drawing.Point(11, 34);
+            this.txtNombreClienteDP.Name = "txtNombreClienteDP";
+            this.txtNombreClienteDP.Size = new System.Drawing.Size(230, 20);
+            this.txtNombreClienteDP.TabIndex = 20;
             // 
             // btnEliminar
             // 
@@ -285,6 +289,7 @@
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label8
             // 
@@ -313,6 +318,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label11
             // 
@@ -353,15 +359,16 @@
             this.btnAgregar.TabIndex = 13;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cmbProductoId
+            // cmbProducto
             // 
-            this.cmbProductoId.BackColor = System.Drawing.SystemColors.Menu;
-            this.cmbProductoId.FormattingEnabled = true;
-            this.cmbProductoId.Location = new System.Drawing.Point(11, 93);
-            this.cmbProductoId.Name = "cmbProductoId";
-            this.cmbProductoId.Size = new System.Drawing.Size(230, 21);
-            this.cmbProductoId.TabIndex = 12;
+            this.cmbProducto.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Location = new System.Drawing.Point(11, 93);
+            this.cmbProducto.Name = "cmbProducto";
+            this.cmbProducto.Size = new System.Drawing.Size(230, 21);
+            this.cmbProducto.TabIndex = 12;
             // 
             // panel6
             // 
@@ -393,6 +400,7 @@
             this.btnRegistrarDP.TabIndex = 6;
             this.btnRegistrarDP.Text = "Registrar";
             this.btnRegistrarDP.UseVisualStyleBackColor = false;
+            this.btnRegistrarDP.Click += new System.EventHandler(this.btnRegistrarDP_Click);
             // 
             // pictureBox2
             // 
@@ -433,21 +441,47 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dgvDetPedido.Location = new System.Drawing.Point(6, 55);
             this.dgvDetPedido.Name = "dgvDetPedido";
             this.dgvDetPedido.ReadOnly = true;
             this.dgvDetPedido.Size = new System.Drawing.Size(467, 233);
             this.dgvDetPedido.TabIndex = 0;
+            this.dgvDetPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetPedido_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IdPedido";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 88;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "IdProducto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 101;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 88;
             // 
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.panelPedido.Controls.Add(this.pictureBox4);
             this.panelPedido.Controls.Add(this.label7);
-            this.panelPedido.Controls.Add(this.textBox2);
+            this.panelPedido.Controls.Add(this.txtDireccionPedido);
             this.panelPedido.Controls.Add(this.label6);
-            this.panelPedido.Controls.Add(this.comboBox1);
-            this.panelPedido.Controls.Add(this.textBox1);
+            this.panelPedido.Controls.Add(this.cmbTipoPedido);
+            this.panelPedido.Controls.Add(this.txtNombreClientePedido);
             this.panelPedido.Controls.Add(this.label5);
             this.panelPedido.Controls.Add(this.btnRegistrarPedido);
             this.panelPedido.Controls.Add(this.pictureBox3);
@@ -479,13 +513,13 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Dirección";
             // 
-            // textBox2
+            // txtDireccionPedido
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(301, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 20);
-            this.textBox2.TabIndex = 18;
+            this.txtDireccionPedido.Enabled = false;
+            this.txtDireccionPedido.Location = new System.Drawing.Point(301, 114);
+            this.txtDireccionPedido.Name = "txtDireccionPedido";
+            this.txtDireccionPedido.Size = new System.Drawing.Size(204, 20);
+            this.txtDireccionPedido.TabIndex = 18;
             // 
             // label6
             // 
@@ -499,20 +533,20 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Nombre";
             // 
-            // comboBox1
+            // cmbTipoPedido
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(35, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 21);
-            this.comboBox1.TabIndex = 16;
+            this.cmbTipoPedido.Location = new System.Drawing.Point(35, 69);
+            this.cmbTipoPedido.Name = "cmbTipoPedido";
+            this.cmbTipoPedido.Size = new System.Drawing.Size(203, 21);
+            this.cmbTipoPedido.TabIndex = 16;
+            this.cmbTipoPedido.SelectedIndexChanged += new System.EventHandler(this.cmbTipoPedido_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtNombreClientePedido
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtNombreClientePedido.Location = new System.Drawing.Point(301, 70);
+            this.txtNombreClientePedido.Name = "txtNombreClientePedido";
+            this.txtNombreClientePedido.Size = new System.Drawing.Size(204, 20);
+            this.txtNombreClientePedido.TabIndex = 15;
             // 
             // label5
             // 
@@ -616,7 +650,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox cmbProductoId;
+        private System.Windows.Forms.ComboBox cmbProducto;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
@@ -626,15 +660,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrarPedido;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDireccionPedido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbTipoPedido;
+        private System.Windows.Forms.TextBox txtNombreClientePedido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAumentar;
         private System.Windows.Forms.Button btnDisminuir;
         private System.Windows.Forms.Label lbCantidadProducto;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombreClienteDP;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
