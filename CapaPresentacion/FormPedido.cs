@@ -31,7 +31,22 @@ namespace CapaPresentacion
             listarComboBoxProducto();
             cmbTipoPedido.DropDownStyle = ComboBoxStyle.DropDownList;//Evita que el usuario pueda modificar el cuadro de texto
             cmbProducto.DropDownStyle = ComboBoxStyle.DropDownList;
-            //panelDetallePedido.Enabled = false;
+            activarPanelPedido();
+        }
+
+        private void limpiarEntradasPedido()
+        {
+            cmbTipoPedido.SelectedIndex = -1;
+            txtNombreClientePedido.Text = "";
+            txtDireccionPedido.Text = "";
+            txtNombreClienteDP.Text = "";
+        }
+
+        private void limpiarEntradasDetPedido()
+        {
+            cmbProducto.SelectedIndex = -1;
+            cantidadProducto = 1;
+            lbCantidadProducto.Text = "1";
         }
 
         private void listarComboBoxTipoPedido()
@@ -68,6 +83,18 @@ namespace CapaPresentacion
             }
         }
 
+        private void activarPanelPedido()
+        {
+            panelPedido.Enabled = true;
+            panelDetallePedido.Enabled = false;
+        }
+
+        private void activarPanelDetallePedido()
+        {
+            panelPedido.Enabled = false;
+            panelDetallePedido.Enabled = true;
+        }
+
         private void btnRegistrarPedido_Click(object sender, EventArgs e)
         {
             EntPedido pedido = new EntPedido();
@@ -96,7 +123,7 @@ namespace CapaPresentacion
             }
             txtNombreClienteDP.Text = pedido.nombreCliente;
             panelDetallePedido.Enabled = true;
-            //panelPedido.Enabled = false;
+            activarPanelDetallePedido();
         }
 
         private void cmbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,7 +149,7 @@ namespace CapaPresentacion
                 }
             }
             dgvDetPedido.Rows[celda].Cells[2].Value = cantidadProducto.ToString();
-
+            limpiarEntradasDetPedido();
         }
 
         private void dgvDetPedido_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -148,6 +175,7 @@ namespace CapaPresentacion
                 dgvDetPedido.Rows.RemoveAt(index);
  
             }
+            limpiarEntradasDetPedido();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -162,6 +190,7 @@ namespace CapaPresentacion
                 }
 
             }
+            limpiarEntradasDetPedido();
         }
 
         private void btnRegistrarDP_Click(object sender, EventArgs e)
@@ -175,6 +204,10 @@ namespace CapaPresentacion
 
                 LogDetallePedido.Instancia.InsertarDetallePedido(detPedido);
             }
+            limpiarEntradasDetPedido();
+            limpiarEntradasPedido();
+            dgvDetPedido.Rows.Clear();//elimina las finlas de la coleccion
+            activarPanelPedido();
         }
     }
 }
