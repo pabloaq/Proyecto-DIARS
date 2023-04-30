@@ -110,9 +110,14 @@ namespace CapaPresentacion
                     pedido.nombreCliente = txtNombreClientePedido.Text;
                     if (txtDireccionPedido.Enabled)
                         pedido.direccion = txtDireccionPedido.Text;
-                    else pedido.direccion = "null";
+                    else
+                        pedido.direccion = "null";
 
                     LogPedido.Instancia.InsertarPedido(pedido);
+
+                    txtNombreClienteDP.Text = pedido.nombreCliente;
+                    panelDetallePedido.Enabled = true;
+                    activarPanelDetallePedido();
                 }
                 else
                     MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -121,9 +126,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error.." + ex);
             }
-            txtNombreClienteDP.Text = pedido.nombreCliente;
-            panelDetallePedido.Enabled = true;
-            activarPanelDetallePedido();
         }
 
         private void cmbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
