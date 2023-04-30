@@ -206,8 +206,13 @@ namespace CapaPresentacion
             }
             limpiarEntradasDetPedido();
             limpiarEntradasPedido();
-            dgvDetPedido.Rows.Clear();//elimina las finlas de la coleccion
+            dgvDetPedido.Rows.Clear();//elimina las filas de la coleccion
             activarPanelPedido();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
