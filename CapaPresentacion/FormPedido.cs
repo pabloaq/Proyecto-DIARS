@@ -17,6 +17,7 @@ namespace CapaPresentacion
     public partial class FormPedido : Form
     {
         private List<EntTipoPedido> listaTipoPedido = LogTipoPedido.Instancia.ListarTipoPedido();
+        
         private List<EntProducto> listaProducto = LogProducto.Instancia.ListarProducto();
         
         private int cantidadMaxProducto = 15;
@@ -228,6 +229,11 @@ namespace CapaPresentacion
         }
 
         private void dgvDetPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
         {
 
         }

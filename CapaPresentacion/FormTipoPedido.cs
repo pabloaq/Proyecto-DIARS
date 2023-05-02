@@ -20,7 +20,7 @@ namespace CapaPresentacion
         }
         public void ListarTipoPedido()
         {
-            dgvTipoPedido.DataSource = LogTipoPedido.Instancia.ListarTipoPedido();
+            //dgvTipoPedido.DataSource = LogTipoPedido.Instancia.ListarTipoPedido();
         }
 
 
