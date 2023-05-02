@@ -135,5 +135,9 @@ namespace MantenedorProducto
             limpiarVariables();
             listaProductos();
         }
+
+        private void FormProducto_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
