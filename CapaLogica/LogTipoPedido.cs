@@ -21,7 +21,7 @@ namespace CapaLogica
         #endregion Patron Sigleton
 
         #region Metodos
-
+        
         public List<EntTipoPedido> ListarTipoPedido()
         {
             try
@@ -34,7 +34,7 @@ namespace CapaLogica
                 throw e;
             }
         }
-
+        
         public bool AgregarTipoPedido(EntTipoPedido tipoPedido)
         {
             try

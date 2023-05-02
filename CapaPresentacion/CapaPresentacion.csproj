@@ -52,6 +52,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="formCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCajero.Designer.cs">
+      <DependentUpon>formCajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEJEMPLO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCajero.resx">
+      <DependentUpon>formCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formCategoria.resx">
       <DependentUpon>formCategoria.cs</DependentUpon>
@@ -218,7 +227,6 @@
     <None Include="Resources\imagenPedido1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\borrar.png" />
     <None Include="Resources\minimizar.png" />
     <None Include="Resources\imgLogopng.png" />
     <None Include="Resources\cerrar.png" />
