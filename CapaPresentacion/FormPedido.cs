@@ -47,5 +47,20 @@ namespace CapaPresentacion
             panelDetallePedido.Enabled = true;
             panelPedido.Enabled = false;
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDetPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

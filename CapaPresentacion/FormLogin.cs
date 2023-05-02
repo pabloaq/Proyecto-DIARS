@@ -71,5 +71,10 @@ namespace CapaPresentacion
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
