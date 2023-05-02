@@ -35,7 +35,40 @@ namespace CapaLogica
             }
         }
         
+        public bool AgregarTipoPedido(EntTipoPedido tipoPedido)
+        {
+            try
+            {
+                return datTipoPedido.Instancia.AgregarTipoPedido(tipoPedido);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool ModificarTipoPedido(EntTipoPedido tipoPedido)
+        {
+            try
+            {
+                return datTipoPedido.Instancia.ModificarTipoPedido(tipoPedido);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public bool EliminarTipoPedido(string idTp)
+        {
+            try
+            {
+                return datTipoPedido.Instancia.EliminarTipoPedido(idTp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion Metodos
     }
-
 }

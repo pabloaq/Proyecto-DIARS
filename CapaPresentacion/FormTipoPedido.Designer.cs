@@ -41,6 +41,8 @@
             this.btnAgregarTipoPedido = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.idTipoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreTipoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoPedido)).BeginInit();
@@ -56,7 +58,7 @@
             this.panel1.Location = new System.Drawing.Point(2, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(725, 337);
+            this.panel1.Size = new System.Drawing.Size(904, 415);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -73,7 +75,7 @@
             this.panel2.Location = new System.Drawing.Point(16, 11);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(699, 267);
+            this.panel2.Size = new System.Drawing.Size(869, 329);
             this.panel2.TabIndex = 4;
             // 
             // txtNombreTipoPedido
@@ -97,20 +99,24 @@
             // dgvTipoPedido
             // 
             this.dgvTipoPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoPedido.Location = new System.Drawing.Point(221, 15);
-            this.dgvTipoPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idTipoPedido,
+            this.nombreTipoPedido});
+            this.dgvTipoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvTipoPedido.Location = new System.Drawing.Point(295, 19);
             this.dgvTipoPedido.Name = "dgvTipoPedido";
             this.dgvTipoPedido.RowHeadersWidth = 51;
             this.dgvTipoPedido.RowTemplate.Height = 24;
-            this.dgvTipoPedido.Size = new System.Drawing.Size(466, 176);
+            this.dgvTipoPedido.Size = new System.Drawing.Size(558, 217);
             this.dgvTipoPedido.TabIndex = 6;
             this.dgvTipoPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoPedido_CellContentClick);
+            this.dgvTipoPedido.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTipoPedido_CellMouseDoubleClick);
             // 
             // btnEliminarTipoPedido
             // 
             this.btnEliminarTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnEliminarTipoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarTipoPedido.Location = new System.Drawing.Point(601, 214);
+            this.btnEliminarTipoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTipoPedido.Location = new System.Drawing.Point(725, 264);
             this.btnEliminarTipoPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarTipoPedido.Name = "btnEliminarTipoPedido";
             this.btnEliminarTipoPedido.Size = new System.Drawing.Size(96, 37);
@@ -127,7 +133,7 @@
             this.lblNombre.Location = new System.Drawing.Point(20, 90);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(180, 18);
+            this.lblNombre.Size = new System.Drawing.Size(221, 21);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre Tipo del Pedido";
             this.lblNombre.Click += new System.EventHandler(this.lblTipoPedido_Click);
@@ -140,7 +146,7 @@
             this.lblTipoPedido.Location = new System.Drawing.Point(20, 23);
             this.lblTipoPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoPedido.Name = "lblTipoPedido";
-            this.lblTipoPedido.Size = new System.Drawing.Size(139, 18);
+            this.lblTipoPedido.Size = new System.Drawing.Size(169, 21);
             this.lblTipoPedido.TabIndex = 9;
             this.lblTipoPedido.Text = "ID Tipo del Pedido";
             this.lblTipoPedido.Click += new System.EventHandler(this.lblTipoPedido_Click);
@@ -185,7 +191,8 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.Location = new System.Drawing.Point(619, 289);
+
+            this.btnSalir.Location = new System.Drawing.Point(746, 356);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(96, 37);
@@ -194,12 +201,29 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // idTipoPedido
+            // 
+            this.idTipoPedido.DataPropertyName = "IdTipoPedido";
+            this.idTipoPedido.HeaderText = "ID";
+            this.idTipoPedido.MinimumWidth = 6;
+            this.idTipoPedido.Name = "idTipoPedido";
+            this.idTipoPedido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nombreTipoPedido
+            // 
+            this.nombreTipoPedido.DataPropertyName = "NombreTipoPedido";
+            this.nombreTipoPedido.HeaderText = "Nombre del Tipo de Pedido";
+            this.nombreTipoPedido.MinimumWidth = 6;
+            this.nombreTipoPedido.Name = "nombreTipoPedido";
+            this.nombreTipoPedido.Width = 400;
+            // 
             // FormTipoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 331);
+            this.ClientSize = new System.Drawing.Size(906, 410);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTipoPedido";
@@ -228,5 +252,7 @@
         private System.Windows.Forms.TextBox txtIDTipoPedido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreTipoPedido;
     }
 }
