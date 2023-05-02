@@ -25,7 +25,36 @@ namespace CapaDatos
         #endregion Patron Sigleton
 
         #region Metodos
+        public bool InsertarDetallePedido(EntDetallePedido DetallePedido)
+        {
+            SqlCommand cmd = null;
+            bool inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spInsertarDetallePedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@IdProducto", DetallePedido.idProducto);
+                cmd.Parameters.AddWithValue("@IdPedido", DetallePedido.idPedido);
+                cmd.Parameters.AddWithValue("@cantidad", DetallePedido.cantidad);
+
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally { cmd.Connection.Close(); }
+
+            return inserta;
+        }
         #endregion Metodos
     }
 }

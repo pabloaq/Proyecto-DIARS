@@ -46,6 +46,7 @@ namespace CapaPresentacion
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -136,7 +137,7 @@ namespace CapaPresentacion
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = global::CapaPresentacion.Properties.Resources.imgLogopng;
-            this.logo.Location = new System.Drawing.Point(2, 62);
+            this.logo.Location = new System.Drawing.Point(3, 77);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(276, 281);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,11 +171,22 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.panel1.Controls.Add(this.lbTitulo);
             this.panel1.Controls.Add(this.logo);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 390);
             this.panel1.TabIndex = 9;
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.White;
+            this.lbTitulo.Location = new System.Drawing.Point(47, 33);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(186, 41);
+            this.lbTitulo.TabIndex = 9;
+            this.lbTitulo.Text = "BIENVENIDO";
             // 
             // FormLogin
             // 
@@ -220,5 +232,6 @@ namespace CapaPresentacion
         private PictureBox logo;
         private Timer timer1;
         private Panel panel1;
+        private Label lbTitulo;
     }
 }

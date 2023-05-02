@@ -24,7 +24,10 @@ namespace CapaLogica
         #endregion Patron Sigleton
 
         #region Metodos
-
+        public bool InsertarDetallePedido(EntDetallePedido detallePedido)
+        {
+            return DatDetallePedido.Instancia.InsertarDetallePedido(detallePedido);
+        }
         #endregion Metodos
     }
 }
