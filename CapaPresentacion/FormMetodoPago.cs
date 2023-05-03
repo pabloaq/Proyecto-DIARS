@@ -9,11 +9,29 @@ namespace CapaPresentacion
     {
         public FormMetodoPago()
         {
-
+            InitializeComponent();
         }
+
+
 
         private void btnAgregarMetodoPago_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if(txtNombreMetodoPago.Text != "" && txtIdMetodoPago.Text != "" && cbCategoriaMetodoPago.SelectedIndex != -1)
+                {
+                    
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Casillas vacia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
             
         }
 
