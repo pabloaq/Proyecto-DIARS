@@ -12,10 +12,7 @@ namespace CapaDatos
         //Variable estática para la instancia
         //privado para evitar la instanciación directa
         private static readonly DatCategoriaMetodoPago _instancia = new DatCategoriaMetodoPago();
-        public static DatCategoriaMetodoPago Instancia
-        {
-            get { return _instancia; }
-        }
+        public static DatCategoriaMetodoPago Instancia { get { return _instancia; } }
 
         #endregion
 

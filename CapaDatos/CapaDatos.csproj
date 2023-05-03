@@ -45,6 +45,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DatCategoriaMetodoPago.cs" />
     <Compile Include="DatDetallePedido.cs" />
+    <Compile Include="DatMetodoPago.cs" />
     <Compile Include="DatPedido.cs" />
     <Compile Include="datTipoPedido.cs" />
     <Compile Include="DatProducto.cs" />

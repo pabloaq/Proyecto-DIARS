@@ -181,6 +181,7 @@
             this.btnMetodo.TabIndex = 6;
             this.btnMetodo.Text = "Método de Pago";
             this.btnMetodo.UseVisualStyleBackColor = false;
+            this.btnMetodo.Click += new System.EventHandler(this.btnMetodo_Click);
             // 
             // panel4
             // 
@@ -221,6 +222,7 @@
             this.btnCategoriaMetPag.TabIndex = 10;
             this.btnCategoriaMetPag.Text = "Categoría Método de Pago";
             this.btnCategoriaMetPag.UseVisualStyleBackColor = false;
+            this.btnCategoriaMetPag.Click += new System.EventHandler(this.btnCategoriaMetPag_Click);
             // 
             // panel7
             // 

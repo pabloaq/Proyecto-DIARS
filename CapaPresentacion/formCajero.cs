@@ -109,5 +109,15 @@ namespace CapaPresentacion
         {
             AbrirForm<FormProducto>();
         }
+
+        private void btnMetodo_Click(object sender, EventArgs e)
+        {
+            AbrirForm<FormCategoriaMetodoPago>();
+        }
+
+        private void btnCategoriaMetPag_Click(object sender, EventArgs e)
+        {
+            AbrirForm<FormMetodoPago>();
+        }
     }
 }

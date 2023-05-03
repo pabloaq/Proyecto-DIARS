@@ -1,6 +1,7 @@
 ﻿using CapaEntidad;
 using CapaLogica;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -113,13 +114,13 @@ namespace CapaPresentacion
         private void btn_EliminarCatMetodoPago_MouseEnter(object sender, EventArgs e)
         {
             label2.Visible = true;
-            btnSalir.Location = new System.Drawing.Point(244, 200);
+            btnSalir.Location = new System.Drawing.Point(313, 209);
         }
 
         private void btn_EliminarCatMetodoPago_MouseLeave(object sender, EventArgs e)
         {
             label2.Visible = false;
-            btnSalir.Location = new System.Drawing.Point(244, 171);
+            btnSalir.Location = new System.Drawing.Point(313, 181);
         }
     }
 }

@@ -230,6 +230,8 @@
     <None Include="Resources\minimizar.png" />
     <None Include="Resources\imgLogopng.png" />
     <None Include="Resources\cerrar.png" />
+    <None Include="Resources\icons8-trash.gif" />
+    <None Include="Resources\icons8-save.gif" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
     <None Include="Resources\producto.jpg" />
