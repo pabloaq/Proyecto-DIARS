@@ -41,9 +41,10 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     EntMetodoPago metodoPago = new EntMetodoPago();
-                    metodoPago.idMetodoPago = Convert.ToString(dr["IdMetodoPago"]);
-                    metodoPago.idCategoriaMetodoPago = Convert.ToString(dr["IdCategoriaMetodoPago"]);
-                    metodoPago.nombre = Convert.ToString(dr["nombre"]);
+
+                    metodoPago.idMetodoPago = Convert.ToString(dr["Codigo"]);
+                    metodoPago.nombreCategoriaMetodoPago = Convert.ToString(dr["NombreCategoria"]);
+                    metodoPago.nombre = Convert.ToString(dr["NombreMetodoPago"]);
 
                     lista.Add(metodoPago);
                 }

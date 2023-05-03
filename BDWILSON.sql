@@ -110,10 +110,10 @@ BEGIN
 END;
 
 -- PROCEDIMIENTOS METODO PAGO
-CREATE PROCEDURE spListarMetodoPago
+CREATE OR ALTER PROCEDURE spListarMetodoPago
 AS
 BEGIN 
-	SELECT * FROM Metodopago;
+	SELECT Metodopago.IdMetodoPago AS Codigo, CategoriaMetodoPago.nombre AS NombreCategoria, Metodopago.nombre AS NombreMetodoPago FROM Metodopago INNER JOIN CategoriaMetodoPago ON Metodopago.IdCategoriaMetodoPago = CategoriaMetodoPago.IdCategoriaMetodoPago;
 END;
 
 CREATE PROCEDURE spInsertarMetodoPago(
@@ -143,3 +143,5 @@ CREATE PROCEDURE spEliminarMetodoPago(
 BEGIN
 	DELETE FROM Metodopago WHERE IdMetodoPago = @IdMetodoPago;
 END;
+
+
