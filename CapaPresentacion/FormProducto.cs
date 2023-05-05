@@ -69,7 +69,7 @@ namespace MantenedorProducto
 
                     producto.IdCategoriaProducto = cbCategoria.Text;
                     producto.Nombre = txtNombre.Text;
-                    producto.PrecioUnitario = int.Parse(txtPrecio.Text);
+                    producto.PrecioUnitario = float.Parse(txtPrecio.Text);
                     producto.Stock = int.Parse(txtStock.Text);
                     producto.FechaCaducidad = dt_fechaCaducidad.Value;
 
