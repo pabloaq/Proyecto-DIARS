@@ -58,6 +58,12 @@
     <Compile Include="formCajero.Designer.cs">
       <DependentUpon>formCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCategoriaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoriaProducto.Designer.cs">
+      <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEJEMPLO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="FormPagoTrabajador.Designer.cs">
       <DependentUpon>FormPagoTrabajador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formCategoria.Designer.cs">
-      <DependentUpon>formCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCategoriaMetodoPago.cs">
       <SubType>Form</SubType>
@@ -126,11 +126,11 @@
     <EmbeddedResource Include="formCajero.resx">
       <DependentUpon>formCajero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formCategoria.resx">
-      <DependentUpon>formCategoria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCategoriaMetodoPago.resx">
       <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoriaProducto.resx">
+      <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formComprobantePago.resx">
       <DependentUpon>formComprobantePago.cs</DependentUpon>
@@ -232,6 +232,7 @@
     <None Include="Resources\cerrar.png" />
     <None Include="Resources\icons8-trash.gif" />
     <None Include="Resources\icons8-save.gif" />
+    <None Include="Resources\logo2.png" />
     <Content Include="Resources\ola.png" />
     <Content Include="Resources\padlock.png" />
     <None Include="Resources\producto.jpg" />
