@@ -58,7 +58,7 @@ namespace CapaDatos
             return lista;
         }
 
-        public bool InsertarCategoriaPedido(EntCategoriaProducto categoriaProducto)
+        public bool InsertarCategoriaProducto(EntCategoriaProducto categoriaProducto)
         {
             SqlCommand cmd = null;
             bool inserta = false;
