@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntCategoriaMetodoPago.cs" />
+    <Compile Include="EntCategoriaProducto.cs" />
     <Compile Include="EntDetallePedido.cs" />
     <Compile Include="EntMetodoPago.cs" />
     <Compile Include="EntPedido.cs" />
