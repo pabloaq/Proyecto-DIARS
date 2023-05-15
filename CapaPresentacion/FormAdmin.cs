@@ -15,11 +15,11 @@ namespace CapaPresentacion
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            formCategoria form = new formCategoria();
+            /*formCategoria form = new formCategoria();
             form.TopLevel = false;
             form.Location = new Point((panelPrincipal.Width - form.Width) / 2, (panelPrincipal.Height - form.Height) / 2);
             panelPrincipal.Controls.Add(form);
-            form.Show();
+            form.Show();*/
         }
 
         private void btnProducto_Click(object sender, EventArgs e)

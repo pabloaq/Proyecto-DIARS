@@ -2,21 +2,45 @@
 using CapaEntidad;
 using CapaLogica;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace MantenedorProducto
 {
     public partial class FormProducto : Form
     {
+        List<EntCategoriaProducto> listaCategoriaProducto = LogCategoriaProducto.Instancia.ListarCategoriaProducto();
+
         public FormProducto()
         {
             InitializeComponent();
             listaProductos();
+            listarCategoriaProducto();
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;//Evita que el usuario pueda modificar el cuadro de texto
         }
 
         private void listaProductos()
         {
             dgv_listaProductos.DataSource = LogProducto.Instancia.ListarProducto();
+        }
+
+        private void listarCategoriaProducto()
+        {
+            foreach (EntCategoriaProducto categoriaProducto in listaCategoriaProducto)
+            {
+                cmbCategoria.Items.Add(categoriaProducto.nombre);
+            }
+        }
+
+        private EntCategoriaProducto buscarCategoriaPorNombre(string nombre)
+        {
+            EntCategoriaProducto valor = new EntCategoriaProducto();
+            foreach (EntCategoriaProducto categoria in listaCategoriaProducto)
+            {
+                if (categoria.nombre == nombre)
+                   valor  = categoria;
+            }
+            return valor;
         }
 
         private void dgv_listaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,27 +49,27 @@ namespace MantenedorProducto
             {
                 DataGridViewRow filaActual = dgv_listaProductos.Rows[e.RowIndex];
 
-                //cbCategoria.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString()) - 1;
                 txtIdProducto.Text = filaActual.Cells[0].Value.ToString();
-                cbCategoria.Text = filaActual.Cells[1].Value.ToString();
+                foreach (EntCategoriaProducto categoria in listaCategoriaProducto)
+                {
+                    if (filaActual.Cells[1].Value.ToString() == categoria.idCategoriaProducto)
+                        cmbCategoria.Text = categoria.nombre;
+                }
                 txtNombre.Text = filaActual.Cells[2].Value.ToString();
                 txtStock.Text = filaActual.Cells[3].Value.ToString();
                 txtPrecio.Text = filaActual.Cells[4].Value.ToString();
-                if (filaActual.Cells[5].Value == null)
-                    dt_fechaCaducidad.Value = DateTime.Today;
-                else dt_fechaCaducidad.Text = filaActual.Cells[5].Value.ToString();
+                dt_fechaCaducidad.Value = DateTime.Parse(filaActual.Cells[5].Value.ToString());
             }
-            catch (System.ArgumentOutOfRangeException)
+            catch (System.ArgumentOutOfRangeException) //controla la exepcion de los valores minimos de la fecha de dataTimerPicker
             {
-
+                dt_fechaCaducidad.Value = DateTime.Today;
             }
         }
 
         private void limpiarVariables()
         {
             txtIdProducto.Text = "";
-            //cbCategoria.SelectedIndex = 0;
-            cbCategoria.Text = "";
+            cmbCategoria.SelectedIndex = -1;
             txtNombre.Text = "";
             txtStock.Text = "";
             txtPrecio.Text = "";
@@ -67,7 +91,8 @@ namespace MantenedorProducto
                 {
                     EntProducto producto = new EntProducto();
 
-                    producto.IdCategoriaProducto = cbCategoria.Text;
+                    //producto.IdCategoriaProducto = cmbCategoria.Text;
+                    producto.IdCategoriaProducto = buscarCategoriaPorNombre(cmbCategoria.Text).idCategoriaProducto;
                     producto.Nombre = txtNombre.Text;
                     producto.PrecioUnitario = float.Parse(txtPrecio.Text);
                     producto.Stock = int.Parse(txtStock.Text);
@@ -98,8 +123,9 @@ namespace MantenedorProducto
                 {
                     EntProducto producto = new EntProducto();
 
+                    //producto.IdProducto = txtIdProducto.Text;
                     producto.IdProducto = txtIdProducto.Text;
-                    producto.IdCategoriaProducto = cbCategoria.Text;
+                    producto.IdCategoriaProducto = buscarCategoriaPorNombre(cmbCategoria.Text).idCategoriaProducto;
                     producto.Nombre = txtNombre.Text;
                     producto.PrecioUnitario = int.Parse(txtPrecio.Text);
                     producto.Stock = int.Parse(txtStock.Text);
