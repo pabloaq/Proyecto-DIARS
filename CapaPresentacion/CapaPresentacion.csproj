@@ -99,6 +99,12 @@
     <Compile Include="FormCategoriaProducto.Designer.cs">
       <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComprobante.Designer.cs">
+      <DependentUpon>FormComprobante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEJEMPLO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +128,6 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formComprobantePago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formComprobantePago.Designer.cs">
-      <DependentUpon>formComprobantePago.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPedido.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="FormCategoriaProducto.resx">
       <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formComprobantePago.resx">
-      <DependentUpon>formComprobantePago.cs</DependentUpon>
+    <EmbeddedResource Include="FormComprobante.resx">
+      <DependentUpon>FormComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEJEMPLO.resx">
       <DependentUpon>FormEJEMPLO.cs</DependentUpon>

@@ -121,12 +121,14 @@
             this.btnMetodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMetodo.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnMetodo.ForeColor = System.Drawing.Color.White;
+            this.btnMetodo.Image = ((System.Drawing.Image)(resources.GetObject("btnMetodo.Image")));
             this.btnMetodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMetodo.Location = new System.Drawing.Point(6, 444);
             this.btnMetodo.Name = "btnMetodo";
             this.btnMetodo.Size = new System.Drawing.Size(214, 45);
             this.btnMetodo.TabIndex = 6;
             this.btnMetodo.Text = "Método de Pago";
+            this.btnMetodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMetodo.UseVisualStyleBackColor = false;
             this.btnMetodo.Click += new System.EventHandler(this.btnMetodo_Click);
             // 
@@ -146,13 +148,16 @@
             this.btnCategoriaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoriaProd.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnCategoriaProd.ForeColor = System.Drawing.Color.White;
+            this.btnCategoriaProd.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaProd.Image")));
             this.btnCategoriaProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoriaProd.Location = new System.Drawing.Point(6, 383);
             this.btnCategoriaProd.Name = "btnCategoriaProd";
             this.btnCategoriaProd.Size = new System.Drawing.Size(214, 45);
             this.btnCategoriaProd.TabIndex = 11;
             this.btnCategoriaProd.Text = "Categoría Producto";
+            this.btnCategoriaProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCategoriaProd.UseVisualStyleBackColor = false;
+            this.btnCategoriaProd.Click += new System.EventHandler(this.btnCategoriaProd_Click);
             // 
             // btnCategoriaMetPag
             // 
@@ -162,12 +167,14 @@
             this.btnCategoriaMetPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoriaMetPag.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnCategoriaMetPag.ForeColor = System.Drawing.Color.White;
+            this.btnCategoriaMetPag.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaMetPag.Image")));
             this.btnCategoriaMetPag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoriaMetPag.Location = new System.Drawing.Point(6, 507);
             this.btnCategoriaMetPag.Name = "btnCategoriaMetPag";
             this.btnCategoriaMetPag.Size = new System.Drawing.Size(214, 45);
             this.btnCategoriaMetPag.TabIndex = 10;
             this.btnCategoriaMetPag.Text = "Categoría Método de Pago";
+            this.btnCategoriaMetPag.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCategoriaMetPag.UseVisualStyleBackColor = false;
             this.btnCategoriaMetPag.Click += new System.EventHandler(this.btnCategoriaMetPag_Click);
             // 
@@ -195,6 +202,7 @@
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnProducto.ForeColor = System.Drawing.Color.White;
+            this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProducto.Location = new System.Drawing.Point(6, 316);
             this.btnProducto.Name = "btnProducto";
@@ -221,6 +229,7 @@
             this.btnTipoPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoPedido.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnTipoPedido.ForeColor = System.Drawing.Color.White;
+            this.btnTipoPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoPedido.Image")));
             this.btnTipoPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoPedido.Location = new System.Drawing.Point(6, 254);
             this.btnTipoPedido.Name = "btnTipoPedido";
