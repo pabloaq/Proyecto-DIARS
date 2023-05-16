@@ -71,7 +71,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("spAgregarTipoPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@IdTipoPedido", tipoPedido.idTipoPedido);
                 cmd.Parameters.AddWithValue("@NombreTipoPedido", tipoPedido.nombreTipoPedido);
                 cn.Open();
                 // Se ejecuta el comando SQL
