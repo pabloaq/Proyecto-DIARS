@@ -174,6 +174,7 @@
             this.btnRealizarComprobante.TabIndex = 30;
             this.btnRealizarComprobante.Text = "REALIZAR";
             this.btnRealizarComprobante.UseVisualStyleBackColor = false;
+            this.btnRealizarComprobante.Click += new System.EventHandler(this.btnRealizarComprobante_Click);
             // 
             // FormComprobante
             // 
