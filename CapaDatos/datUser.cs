@@ -23,6 +23,37 @@ namespace CapaDatos
         #endregion singleton
 
         #region metodos
+        public List<EntRol> ListarRoles()
+        {
+            SqlCommand cmd = null;
+            List<EntRol> lista = new List<EntRol>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spListarRoles", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntRol rol = new EntRol();
+                    rol.idrol = Convert.ToInt32(dr["IdRol"]);
+                    rol.rolname = Convert.ToString(dr["rolname"]);
+
+                    lista.Add(rol);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
         public bool validarContrasenia(string name, string contra)
         {
             SqlCommand cmd = null;

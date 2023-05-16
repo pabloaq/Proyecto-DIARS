@@ -38,6 +38,10 @@ namespace CapaLogica
         {
             datUser.Instancia.EliminarUsuario(user);
         }
+        public List<EntRol> ListarRoles()
+        {
+            return datUser.Instancia.ListarRoles();
+        }
         #endregion metodos
     }
 }

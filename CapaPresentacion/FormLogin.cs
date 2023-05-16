@@ -1,4 +1,6 @@
 ﻿using CapaDatos;
+using CapaEntidad;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +75,41 @@ namespace CapaPresentacion
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EntUsuario user = new EntUsuario();
+                user.username = this.txtUsername.Text.Trim();
+                user.contrasenia = this.txtPassword.Text.Trim();
+                
+                if (logUser.Instancia.validarContrasenia(user.username, user.contrasenia) )
+                {
+                    switch (logUser.Instancia.obtenerrol(user.username))
+                    {
+                        case 1:
+                            this.Hide();
+                            FormAdmin paneladmin = new FormAdmin();
+                            paneladmin.ShowDialog();
+                            Close();
+                            break;
+                        case 2:
+                            this.Hide();
+                            formCajero panelcajero = new formCajero();
+                            panelcajero.ShowDialog();
+                            Close();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
