@@ -14,7 +14,10 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormComprobante());
+
+
+            Application.Run(new formCajero());
+
         }
     }
 }

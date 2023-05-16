@@ -73,11 +73,13 @@ namespace CapaPresentacion
             {
                 formulario = new Formulario();
                 formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
                 panelEscritorio.Controls.Add(formulario);
-                //formulario.Dock = DockStyle.Fill;
+                formulario.Dock = DockStyle.Fill;
                 panelEscritorio.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CerrarForm );
             }
             //En caso exista lo traemos al frente
             else
@@ -85,10 +87,29 @@ namespace CapaPresentacion
                 formulario.BringToFront();
             }
         }
+        //metodo para cuando se cierren los formulario
+        private void CerrarForm(object sender,FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["FormPedido"] == null)
+                btnPedido.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["formComprobantePago"] == null)
+                btnComprobante.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["FormTipoPedido"] == null)
+                btnTipoPedido.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["FormProducto"] == null)
+                btnProducto.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["FormCategoriaMetodoPago"] == null)
+                btnCategoriaMetPag.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["FormMetodoPago"] == null)
+                btnMetodo.BackColor = Color.FromArgb(250, 163, 7);
+            if (Application.OpenForms["FormCategoriaProducto"] == null)
+                btnCategoriaProd.BackColor = Color.FromArgb(250, 163, 7);
+        }
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
             AbrirForm<FormPedido>();
+            btnPedido.BackColor = Color.FromArgb(232, 93, 4);
         }
 
         private void nameTitulo_Click(object sender, EventArgs e)
@@ -97,27 +118,39 @@ namespace CapaPresentacion
         }
         private void btnComprobante_Click(object sender, EventArgs e)
         {
+
             AbrirForm<FormComprobante>();
+
         }
 
         private void btnTipoPedido_Click(object sender, EventArgs e)
         {
             AbrirForm<FormTipoPedido>();
+            btnTipoPedido.BackColor = Color.FromArgb(232, 93, 4);
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
             AbrirForm<FormProducto>();
+            btnProducto.BackColor = Color.FromArgb(232, 93, 4);
         }
 
         private void btnMetodo_Click(object sender, EventArgs e)
         {
-            AbrirForm<FormCategoriaMetodoPago>();
+            AbrirForm<FormMetodoPago>();
+            btnMetodo.BackColor = Color.FromArgb(232, 93, 4);
         }
 
         private void btnCategoriaMetPag_Click(object sender, EventArgs e)
         {
-            AbrirForm<FormMetodoPago>();
+            AbrirForm<FormCategoriaMetodoPago>();
+            btnCategoriaMetPag.BackColor = Color.FromArgb(232, 93, 4);
+        }
+
+        private void btnCategoriaProd_Click(object sender, EventArgs e)
+        {
+            AbrirForm<FormCategoriaProducto>();
+            btnCategoriaProd.BackColor = Color.FromArgb(232, 93, 4);
         }
     }
 }

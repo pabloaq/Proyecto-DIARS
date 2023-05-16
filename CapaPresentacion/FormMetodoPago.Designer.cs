@@ -32,6 +32,7 @@ namespace CapaPresentacion
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMetodoPago));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbCategoriaMetodoPago = new System.Windows.Forms.ComboBox();
             this.txtIdMetodoPago = new System.Windows.Forms.TextBox();
@@ -45,16 +46,21 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.texto = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.panel1.Controls.Add(this.texto);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.panel1.Controls.Add(this.cbCategoriaMetodoPago);
             this.panel1.Controls.Add(this.txtIdMetodoPago);
             this.panel1.Controls.Add(this.label4);
@@ -74,14 +80,14 @@ namespace CapaPresentacion
             // 
             this.cbCategoriaMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaMetodoPago.FormattingEnabled = true;
-            this.cbCategoriaMetodoPago.Location = new System.Drawing.Point(22, 99);
+            this.cbCategoriaMetodoPago.Location = new System.Drawing.Point(22, 115);
             this.cbCategoriaMetodoPago.Name = "cbCategoriaMetodoPago";
             this.cbCategoriaMetodoPago.Size = new System.Drawing.Size(226, 21);
             this.cbCategoriaMetodoPago.TabIndex = 14;
             // 
             // txtIdMetodoPago
             // 
-            this.txtIdMetodoPago.Location = new System.Drawing.Point(22, 46);
+            this.txtIdMetodoPago.Location = new System.Drawing.Point(22, 59);
             this.txtIdMetodoPago.Name = "txtIdMetodoPago";
             this.txtIdMetodoPago.Size = new System.Drawing.Size(231, 20);
             this.txtIdMetodoPago.TabIndex = 13;
@@ -91,7 +97,7 @@ namespace CapaPresentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 22);
+            this.label4.Location = new System.Drawing.Point(19, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 18);
             this.label4.TabIndex = 12;
@@ -99,12 +105,14 @@ namespace CapaPresentacion
             // 
             // btnModificarMetodoPago
             // 
-            this.btnModificarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnModificarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnModificarMetodoPago.FlatAppearance.BorderSize = 0;
             this.btnModificarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarMetodoPago.Location = new System.Drawing.Point(618, 85);
+            this.btnModificarMetodoPago.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnModificarMetodoPago.Location = new System.Drawing.Point(268, 107);
             this.btnModificarMetodoPago.Name = "btnModificarMetodoPago";
-            this.btnModificarMetodoPago.Size = new System.Drawing.Size(94, 45);
+            this.btnModificarMetodoPago.Size = new System.Drawing.Size(94, 33);
             this.btnModificarMetodoPago.TabIndex = 10;
             this.btnModificarMetodoPago.Text = "Modificar";
             this.btnModificarMetodoPago.UseVisualStyleBackColor = false;
@@ -112,13 +120,15 @@ namespace CapaPresentacion
             // 
             // btnEliminarMetodoPago
             // 
-            this.btnEliminarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnEliminarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnEliminarMetodoPago.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnEliminarMetodoPago.FlatAppearance.BorderSize = 0;
             this.btnEliminarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMetodoPago.Location = new System.Drawing.Point(618, 150);
+            this.btnEliminarMetodoPago.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEliminarMetodoPago.Location = new System.Drawing.Point(268, 162);
             this.btnEliminarMetodoPago.Name = "btnEliminarMetodoPago";
-            this.btnEliminarMetodoPago.Size = new System.Drawing.Size(94, 46);
+            this.btnEliminarMetodoPago.Size = new System.Drawing.Size(94, 33);
             this.btnEliminarMetodoPago.TabIndex = 9;
             this.btnEliminarMetodoPago.Text = "Eliminar";
             this.btnEliminarMetodoPago.UseVisualStyleBackColor = false;
@@ -127,12 +137,14 @@ namespace CapaPresentacion
             // 
             // btnAgregarMetodoPago
             // 
-            this.btnAgregarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnAgregarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnAgregarMetodoPago.FlatAppearance.BorderSize = 0;
             this.btnAgregarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMetodoPago.Location = new System.Drawing.Point(618, 30);
+            this.btnAgregarMetodoPago.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAgregarMetodoPago.Location = new System.Drawing.Point(268, 51);
             this.btnAgregarMetodoPago.Name = "btnAgregarMetodoPago";
-            this.btnAgregarMetodoPago.Size = new System.Drawing.Size(94, 36);
+            this.btnAgregarMetodoPago.Size = new System.Drawing.Size(94, 33);
             this.btnAgregarMetodoPago.TabIndex = 8;
             this.btnAgregarMetodoPago.Text = "Agregar";
             this.btnAgregarMetodoPago.UseVisualStyleBackColor = false;
@@ -144,6 +156,11 @@ namespace CapaPresentacion
             this.dgvMetodoPago.AllowUserToDeleteRows = false;
             this.dgvMetodoPago.AllowUserToResizeColumns = false;
             this.dgvMetodoPago.AllowUserToResizeRows = false;
+            this.dgvMetodoPago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMetodoPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMetodoPago.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,10 +178,10 @@ namespace CapaPresentacion
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMetodoPago.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvMetodoPago.Location = new System.Drawing.Point(259, 22);
+            this.dgvMetodoPago.Location = new System.Drawing.Point(368, 46);
             this.dgvMetodoPago.Name = "dgvMetodoPago";
             this.dgvMetodoPago.ReadOnly = true;
-            this.dgvMetodoPago.Size = new System.Drawing.Size(344, 195);
+            this.dgvMetodoPago.Size = new System.Drawing.Size(344, 174);
             this.dgvMetodoPago.TabIndex = 6;
             this.dgvMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellContentClick);
             this.dgvMetodoPago.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellDoubleClick);
@@ -174,7 +191,7 @@ namespace CapaPresentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 78);
+            this.label2.Location = new System.Drawing.Point(19, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 18);
             this.label2.TabIndex = 2;
@@ -182,7 +199,7 @@ namespace CapaPresentacion
             // 
             // txtNombreMetodoPago
             // 
-            this.txtNombreMetodoPago.Location = new System.Drawing.Point(22, 150);
+            this.txtNombreMetodoPago.Location = new System.Drawing.Point(22, 175);
             this.txtNombreMetodoPago.Name = "txtNombreMetodoPago";
             this.txtNombreMetodoPago.Size = new System.Drawing.Size(231, 20);
             this.txtNombreMetodoPago.TabIndex = 1;
@@ -192,7 +209,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 129);
+            this.label1.Location = new System.Drawing.Point(19, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 0;
@@ -200,8 +217,9 @@ namespace CapaPresentacion
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 241);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(316, 242);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,34 +228,61 @@ namespace CapaPresentacion
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Location = new System.Drawing.Point(615, 241);
+            this.btnSalir.Location = new System.Drawing.Point(19, 250);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(94, 46);
+            this.btnSalir.Size = new System.Drawing.Size(94, 37);
             this.btnSalir.TabIndex = 15;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Atras";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.Salir_Click);
             // 
-            // texto
+            // panel3
             // 
-            this.texto.Location = new System.Drawing.Point(619, 196);
-            this.texto.Name = "texto";
-            this.texto.Size = new System.Drawing.Size(96, 41);
-            this.texto.TabIndex = 25;
-            this.texto.Text = "Haga doble click en el cuadro para eliminar un registro";
-            this.texto.Visible = false;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(534, 240);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(175, 56);
+            this.panel3.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.Location = new System.Drawing.Point(89, 32);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "(044)678102";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label5.Location = new System.Drawing.Point(8, 10);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Av. España 1970. Trujillo. Peru";
             // 
             // FormMetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(721, 299);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -248,6 +293,8 @@ namespace CapaPresentacion
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,6 +314,8 @@ namespace CapaPresentacion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbCategoriaMetodoPago;
         private Button btnSalir;
-        private Label texto;
+        private Panel panel3;
+        private Label label6;
+        private Label label5;
     }
 }
