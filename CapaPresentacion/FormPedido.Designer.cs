@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPedido));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelDetallePedido = new System.Windows.Forms.Panel();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNombreClienteDP = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAumentar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnRegistrarDP = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,17 +45,12 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnAumentar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnDisminuir = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lbCantidadProducto = new System.Windows.Forms.Label();
-            this.panelDetallePedido = new System.Windows.Forms.Panel();
-            this.txtNombreClienteDP = new System.Windows.Forms.TextBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -67,13 +67,11 @@
             this.btnRegistrarPedido = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelDetallePedido.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetPedido)).BeginInit();
-            this.panelDetallePedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelPedido.SuspendLayout();
@@ -87,7 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(92)))));
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panelDetallePedido);
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
@@ -97,26 +95,91 @@
             this.panel1.Size = new System.Drawing.Size(759, 581);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // panelDetallePedido
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelDetallePedido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.btnEliminar);
-            this.panel4.Controls.Add(this.btnAumentar);
-            this.panel4.Controls.Add(this.btnModificar);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.btnAgregar);
-            this.panel4.Controls.Add(this.btnDisminuir);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.lbCantidadProducto);
-            this.panel4.Controls.Add(this.panelDetallePedido);
-            this.panel4.Location = new System.Drawing.Point(12, 184);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(733, 336);
-            this.panel4.TabIndex = 1;
+            this.panelDetallePedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.panelDetallePedido.Controls.Add(this.cmbProducto);
+            this.panelDetallePedido.Controls.Add(this.label11);
+            this.panelDetallePedido.Controls.Add(this.txtNombreClienteDP);
+            this.panelDetallePedido.Controls.Add(this.btnEliminar);
+            this.panelDetallePedido.Controls.Add(this.btnAumentar);
+            this.panelDetallePedido.Controls.Add(this.panel6);
+            this.panelDetallePedido.Controls.Add(this.btnModificar);
+            this.panelDetallePedido.Controls.Add(this.label8);
+            this.panelDetallePedido.Controls.Add(this.btnAgregar);
+            this.panelDetallePedido.Controls.Add(this.btnDisminuir);
+            this.panelDetallePedido.Controls.Add(this.label9);
+            this.panelDetallePedido.Controls.Add(this.lbCantidadProducto);
+            this.panelDetallePedido.Location = new System.Drawing.Point(12, 184);
+            this.panelDetallePedido.Name = "panelDetallePedido";
+            this.panelDetallePedido.Size = new System.Drawing.Size(733, 336);
+            this.panelDetallePedido.TabIndex = 1;
+            // 
+            // cmbProducto
+            // 
+            this.cmbProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Location = new System.Drawing.Point(19, 98);
+            this.cmbProducto.Name = "cmbProducto";
+            this.cmbProducto.Size = new System.Drawing.Size(229, 21);
+            this.cmbProducto.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(98, 138);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Cantidad";
+            // 
+            // txtNombreClienteDP
+            // 
+            this.txtNombreClienteDP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNombreClienteDP.Location = new System.Drawing.Point(19, 50);
+            this.txtNombreClienteDP.Name = "txtNombreClienteDP";
+            this.txtNombreClienteDP.Size = new System.Drawing.Size(230, 20);
+            this.txtNombreClienteDP.TabIndex = 21;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminar.Location = new System.Drawing.Point(170, 202);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(68, 24);
+            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnAumentar
+            // 
+            this.btnAumentar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnAumentar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAumentar.FlatAppearance.BorderSize = 0;
+            this.btnAumentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAumentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAumentar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAumentar.Location = new System.Drawing.Point(170, 154);
+            this.btnAumentar.Name = "btnAumentar";
+            this.btnAumentar.Size = new System.Drawing.Size(68, 24);
+            this.btnAumentar.TabIndex = 23;
+            this.btnAumentar.Text = "+";
+            this.btnAumentar.UseVisualStyleBackColor = false;
+            this.btnAumentar.Click += new System.EventHandler(this.btnAumentar_Click);
             // 
             // panel6
             // 
@@ -135,7 +198,7 @@
             // 
             // btnRegistrarDP
             // 
-            this.btnRegistrarDP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRegistrarDP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrarDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnRegistrarDP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarDP.FlatAppearance.BorderSize = 0;
@@ -152,23 +215,21 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
-            this.pictureBox2.Location = new System.Drawing.Point(98, 13);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(133, 14);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(61, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(235, 33);
             this.label3.TabIndex = 1;
@@ -176,9 +237,10 @@
             // 
             // dgvDetPedido
             // 
-            this.dgvDetPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvDetPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDetPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDetPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -199,78 +261,27 @@
             this.dgvDetPedido.Size = new System.Drawing.Size(467, 233);
             this.dgvDetPedido.TabIndex = 0;
             this.dgvDetPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetPedido_CellClick);
-            this.dgvDetPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetPedido_CellContentClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "IdPedido";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 88;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "IdProducto";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 101;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cantidad";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 88;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(98, 138);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 17);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Cantidad";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEliminar.Location = new System.Drawing.Point(170, 202);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(68, 24);
-            this.btnEliminar.TabIndex = 15;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnAumentar
-            // 
-            this.btnAumentar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAumentar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnAumentar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAumentar.FlatAppearance.BorderSize = 0;
-            this.btnAumentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAumentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAumentar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAumentar.Location = new System.Drawing.Point(170, 154);
-            this.btnAumentar.Name = "btnAumentar";
-            this.btnAumentar.Size = new System.Drawing.Size(68, 24);
-            this.btnAumentar.TabIndex = 23;
-            this.btnAumentar.Text = "+";
-            this.btnAumentar.UseVisualStyleBackColor = false;
-            this.btnAumentar.Click += new System.EventHandler(this.btnAumentar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderSize = 0;
@@ -296,11 +307,9 @@
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 13;
             this.label8.Text = "Cliente";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
@@ -317,7 +326,6 @@
             // 
             // btnDisminuir
             // 
-            this.btnDisminuir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDisminuir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
             this.btnDisminuir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDisminuir.FlatAppearance.BorderSize = 0;
@@ -356,26 +364,6 @@
             this.lbCantidadProducto.TabIndex = 21;
             this.lbCantidadProducto.Text = "1";
             // 
-            // panelDetallePedido
-            // 
-            this.panelDetallePedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDetallePedido.BackColor = System.Drawing.Color.Transparent;
-            this.panelDetallePedido.Controls.Add(this.cmbProducto);
-            this.panelDetallePedido.Controls.Add(this.txtNombreClienteDP);
-            this.panelDetallePedido.Location = new System.Drawing.Point(1, 3);
-            this.panelDetallePedido.Name = "panelDetallePedido";
-            this.panelDetallePedido.Size = new System.Drawing.Size(740, 361);
-            this.panelDetallePedido.TabIndex = 5;
-            // 
-            // txtNombreClienteDP
-            // 
-            this.txtNombreClienteDP.Location = new System.Drawing.Point(18, 47);
-            this.txtNombreClienteDP.Name = "txtNombreClienteDP";
-            this.txtNombreClienteDP.Size = new System.Drawing.Size(230, 20);
-            this.txtNombreClienteDP.TabIndex = 21;
-            this.txtNombreClienteDP.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
-            // 
             // btnAtras
             // 
             this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -397,7 +385,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(332, 522);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 59);
@@ -439,6 +427,8 @@
             // 
             // panelPedido
             // 
+            this.panelPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.panelPedido.Controls.Add(this.pictureBox4);
             this.panelPedido.Controls.Add(this.label7);
@@ -457,11 +447,12 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.imgLogopng;
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(537, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(179, 167);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
             // 
@@ -479,6 +470,8 @@
             // 
             // txtDireccionPedido
             // 
+            this.txtDireccionPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccionPedido.Enabled = false;
             this.txtDireccionPedido.Location = new System.Drawing.Point(301, 114);
             this.txtDireccionPedido.Name = "txtDireccionPedido";
@@ -507,6 +500,8 @@
             // 
             // txtNombreClientePedido
             // 
+            this.txtNombreClientePedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreClientePedido.Location = new System.Drawing.Point(301, 70);
             this.txtNombreClientePedido.Name = "txtNombreClientePedido";
             this.txtNombreClientePedido.Size = new System.Drawing.Size(204, 20);
@@ -543,8 +538,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 34);
@@ -565,14 +560,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Datos del Cliente";
             // 
-            // cmbProducto
-            // 
-            this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Location = new System.Drawing.Point(19, 95);
-            this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(229, 21);
-            this.cmbProducto.TabIndex = 8;
-            // 
             // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,14 +570,12 @@
             this.Name = "FormPedido";
             this.Text = "Pedido";
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelDetallePedido.ResumeLayout(false);
+            this.panelDetallePedido.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetPedido)).EndInit();
-            this.panelDetallePedido.ResumeLayout(false);
-            this.panelDetallePedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -611,7 +596,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnModificar;

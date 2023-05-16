@@ -148,17 +148,17 @@ namespace CapaPresentacion
 
         private void btn_EliminarMetodoPago_MouseEnter(object sender, EventArgs e)
         {
-            texto.Visible = true;
+            
         }
 
         private void btn_EliminarMetodoPago_MouseLeave(object sender, EventArgs e)
         {
-            texto.Visible = false;
+            
         }
 
         private void Salir_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

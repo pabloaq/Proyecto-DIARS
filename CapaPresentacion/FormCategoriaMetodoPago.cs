@@ -113,14 +113,12 @@ namespace CapaPresentacion
 
         private void btn_EliminarCatMetodoPago_MouseEnter(object sender, EventArgs e)
         {
-            label2.Visible = true;
-            btnSalir.Location = new System.Drawing.Point(313, 209);
+
         }
 
         private void btn_EliminarCatMetodoPago_MouseLeave(object sender, EventArgs e)
         {
-            label2.Visible = false;
-            btnSalir.Location = new System.Drawing.Point(313, 181);
+
         }
     }
 }

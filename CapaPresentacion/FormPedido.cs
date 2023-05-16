@@ -218,24 +218,5 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvDetPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
