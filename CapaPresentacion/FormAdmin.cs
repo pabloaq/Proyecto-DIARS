@@ -33,7 +33,7 @@ namespace CapaPresentacion
 
         private void btnPagoTrabajador_Click(object sender, EventArgs e)
         {
-            FormPagoTrabajador form = new FormPagoTrabajador();
+            FormRegistroUsuario form = new FormRegistroUsuario();
             form.TopLevel = false;
             form.Location = new Point((panelPrincipal.Width - form.Width) / 2, (panelPrincipal.Height - form.Height) / 2);
             panelPrincipal.Controls.Add(form);
@@ -73,6 +73,11 @@ namespace CapaPresentacion
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
