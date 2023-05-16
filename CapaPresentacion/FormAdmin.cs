@@ -51,11 +51,11 @@ namespace CapaPresentacion
 
         private void btnComprobante_Click(object sender, EventArgs e)
         {
-            formComprobantePago form = new formComprobantePago();
+            /*formComprobantePago form = new formComprobantePago();
             form.TopLevel = false;
             form.Location = new Point((panelPrincipal.Width - form.Width) / 2, (panelPrincipal.Height - form.Height) / 2);
             panelPrincipal.Controls.Add(form);
-            form.Show();
+            form.Show();*/
         }
 
         private void btnMetodoPago_Click(object sender, EventArgs e)

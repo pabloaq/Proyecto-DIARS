@@ -97,7 +97,7 @@ namespace CapaPresentacion
         }
         private void btnComprobante_Click(object sender, EventArgs e)
         {
-            AbrirForm<formComprobantePago>();
+            AbrirForm<FormComprobante>();
         }
 
         private void btnTipoPedido_Click(object sender, EventArgs e)
