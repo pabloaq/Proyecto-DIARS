@@ -126,13 +126,13 @@ namespace CapaPresentacion
         {
             // Ocultar el formulario actual
             this.Close();
-
+            /*
             // Mostrar el formulario anterior que ya está en memoria
             FormAdmin formAdmin = Application.OpenForms.OfType<FormAdmin>().FirstOrDefault();
             if (formAdmin != null)
             {
                 formAdmin.Show();
-            }
+            }*/
         }
 
 
@@ -171,7 +171,22 @@ namespace CapaPresentacion
         {
 
         }
+         /*
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
+            // Mostrar el formulario anterior que ya está en memoria
+            FormAdmin formAdmin = Application.OpenForms.OfType<FormAdmin>().FirstOrDefault();
+            if (formAdmin != null)
+            {
+                formAdmin.Show();
+            }
+        }*/
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
