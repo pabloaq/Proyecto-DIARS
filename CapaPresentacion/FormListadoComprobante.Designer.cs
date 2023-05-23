@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FormListadoDetallePedido
+    partial class FormListadoComprobante
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoDetallePedido));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoComprobante));
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvDetallePedido = new System.Windows.Forms.DataGridView();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePedido)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.dgvComprobante = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprobante)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -47,29 +47,19 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(116, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 33);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Detalle Pedido";
+            this.label3.Size = new System.Drawing.Size(167, 33);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Comprobante";
             // 
-            // dgvDetallePedido
+            // pictureBox2
             // 
-            this.dgvDetallePedido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDetallePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetallePedido.Location = new System.Drawing.Point(79, 94);
-            this.dgvDetallePedido.Name = "dgvDetallePedido";
-            this.dgvDetallePedido.ReadOnly = true;
-            this.dgvDetallePedido.Size = new System.Drawing.Size(642, 305);
-            this.dgvDetallePedido.TabIndex = 10;
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(214, 68);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(348, 20);
-            this.txtNombreCliente.TabIndex = 12;
-            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(79, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -80,8 +70,16 @@
             this.label6.Location = new System.Drawing.Point(79, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 17);
-            this.label6.TabIndex = 18;
+            this.label6.TabIndex = 20;
             this.label6.Text = "Nombre de Cliente";
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(214, 68);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(348, 20);
+            this.txtNombreCliente.TabIndex = 19;
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // btnReporte
             // 
@@ -95,37 +93,39 @@
             this.btnReporte.Location = new System.Drawing.Point(615, 409);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(106, 29);
-            this.btnReporte.TabIndex = 19;
+            this.btnReporte.TabIndex = 22;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // dgvComprobante
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(79, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.dgvComprobante.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvComprobante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComprobante.Location = new System.Drawing.Point(79, 94);
+            this.dgvComprobante.Name = "dgvComprobante";
+            this.dgvComprobante.ReadOnly = true;
+            this.dgvComprobante.Size = new System.Drawing.Size(642, 305);
+            this.dgvComprobante.TabIndex = 21;
             // 
-            // FormListadoDetallePedido
+            // FormListadoComprobante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.dgvComprobante);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNombreCliente);
-            this.Controls.Add(this.dgvDetallePedido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormListadoDetallePedido";
-            this.Text = "Reporte Detalle Pedido";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePedido)).EndInit();
+            this.Name = "FormListadoComprobante";
+            this.Text = "Reporte Comprobante";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprobante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,11 +133,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvDetallePedido;
-        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.DataGridView dgvComprobante;
     }
 }

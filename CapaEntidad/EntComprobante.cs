@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class EntComprobante
     {
+        public string IdComprobante { get; set; }
         public string PedidoID { get; set; }
         public string MetodopagoID { get; set; }
         public float montoTotal { get; set; }

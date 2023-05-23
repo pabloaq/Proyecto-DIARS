@@ -25,6 +25,80 @@ namespace CapaDatos
         #endregion Patron Singleton
 
         #region Metodos
+        public List<EntComprobante> ListarComprobante()
+        {
+            SqlCommand cmd = null;
+            List<EntComprobante> lista = new List<EntComprobante>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spListarComprobante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntComprobante comprobante = new EntComprobante();
+
+                    comprobante.IdComprobante = Convert.ToString(dr["idComprobante"]);
+                    comprobante.PedidoID = Convert.ToString(dr["NombreCliente"]);
+                    comprobante.MetodopagoID = Convert.ToString(dr["nombre"]);
+                    comprobante.montoTotal = float.Parse(dr["MontoTotal"].ToString());
+                    comprobante.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+
+                    lista.Add(comprobante);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
+        public List<EntComprobante> BuscarComprobante(string nombreCliente)
+        {
+            SqlCommand cmd = null;
+            List<EntComprobante> lista = new List<EntComprobante>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spBuscarComprobante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@NombreCliente", nombreCliente);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntComprobante comprobante = new EntComprobante();
+
+                    comprobante.IdComprobante = Convert.ToString(dr["idComprobante"]);
+                    comprobante.PedidoID = Convert.ToString(dr["NombreCliente"]);
+                    comprobante.MetodopagoID = Convert.ToString(dr["nombre"]);
+                    comprobante.montoTotal = float.Parse(dr["MontoTotal"].ToString());
+                    comprobante.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+
+                    lista.Add(comprobante);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
 
         public bool InsertaDatosComprobante(EntComprobante comprobante)
         {
