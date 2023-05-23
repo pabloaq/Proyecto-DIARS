@@ -25,6 +25,77 @@ namespace CapaDatos
         #endregion Patron Sigleton
 
         #region Metodos
+        public List<EntDetallePedido> ListarDetallePedido()
+        {
+            SqlCommand cmd = null;
+            List<EntDetallePedido> lista = new List<EntDetallePedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spListarDetallePedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntDetallePedido detallePedido = new EntDetallePedido();
+
+                    detallePedido.idProducto = Convert.ToString(dr["Nombre"]);
+                    detallePedido.idPedido = Convert.ToString(dr["NombreCliente"]);
+                    detallePedido.cantidad = Convert.ToInt32(dr["cantidad"]);
+
+                    lista.Add(detallePedido);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
+        public List<EntDetallePedido> BuscarDetallePedido(string nombreCliente)
+        {
+            SqlCommand cmd = null;
+            List<EntDetallePedido> lista = new List<EntDetallePedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spBuscarDetallePedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@NombreCliente", nombreCliente);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntDetallePedido detallePedido = new EntDetallePedido();
+
+                    detallePedido.idProducto = Convert.ToString(dr["Nombre"]);
+                    detallePedido.idPedido = Convert.ToString(dr["NombreCliente"]);
+                    detallePedido.cantidad = Convert.ToInt32(dr["cantidad"]);
+
+                    lista.Add(detallePedido);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
         public bool InsertarDetallePedido(EntDetallePedido DetallePedido)
         {
             SqlCommand cmd = null;
