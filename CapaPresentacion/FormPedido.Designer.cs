@@ -58,7 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelPedido = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbDireccion = new System.Windows.Forms.Label();
             this.txtDireccionPedido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
@@ -431,7 +431,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.panelPedido.Controls.Add(this.pictureBox4);
-            this.panelPedido.Controls.Add(this.label7);
+            this.panelPedido.Controls.Add(this.lbDireccion);
             this.panelPedido.Controls.Add(this.txtDireccionPedido);
             this.panelPedido.Controls.Add(this.label6);
             this.panelPedido.Controls.Add(this.cmbTipoPedido);
@@ -456,27 +456,28 @@
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
             // 
-            // label7
+            // lbDireccion
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(301, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Dirección";
+            this.lbDireccion.AutoSize = true;
+            this.lbDireccion.BackColor = System.Drawing.Color.Transparent;
+            this.lbDireccion.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDireccion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbDireccion.Location = new System.Drawing.Point(301, 93);
+            this.lbDireccion.Name = "lbDireccion";
+            this.lbDireccion.Size = new System.Drawing.Size(70, 17);
+            this.lbDireccion.TabIndex = 19;
+            this.lbDireccion.Text = "Dirección";
+            this.lbDireccion.Visible = false;
             // 
             // txtDireccionPedido
             // 
             this.txtDireccionPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccionPedido.Enabled = false;
             this.txtDireccionPedido.Location = new System.Drawing.Point(301, 114);
             this.txtDireccionPedido.Name = "txtDireccionPedido";
             this.txtDireccionPedido.Size = new System.Drawing.Size(204, 20);
             this.txtDireccionPedido.TabIndex = 18;
+            this.txtDireccionPedido.Visible = false;
             // 
             // label6
             // 
@@ -611,7 +612,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrarPedido;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbDireccion;
         private System.Windows.Forms.TextBox txtDireccionPedido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbTipoPedido;

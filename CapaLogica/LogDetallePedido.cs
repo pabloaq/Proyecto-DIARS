@@ -24,6 +24,16 @@ namespace CapaLogica
         #endregion Patron Sigleton
 
         #region Metodos
+        public List<EntDetallePedido> ListarDetallePedido()
+        {
+            return DatDetallePedido.Instancia.ListarDetallePedido();
+        }
+
+        public List<EntDetallePedido> buscarDetallePedido(string nombreCliente)
+        {
+            return DatDetallePedido.Instancia.BuscarDetallePedido(nombreCliente);
+        }
+
         public bool InsertarDetallePedido(EntDetallePedido detallePedido)
         {
             return DatDetallePedido.Instancia.InsertarDetallePedido(detallePedido);

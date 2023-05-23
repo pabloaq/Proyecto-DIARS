@@ -109,7 +109,7 @@ namespace CapaPresentacion
                             pedido.idTipoPedido = tipoPedido.idTipoPedido;
                     }
                     pedido.nombreCliente = txtNombreClientePedido.Text;
-                    if (txtDireccionPedido.Enabled)
+                    if (txtDireccionPedido.Visible)
                         pedido.direccion = txtDireccionPedido.Text;
                     else
                         pedido.direccion = "null";
@@ -131,10 +131,16 @@ namespace CapaPresentacion
 
         private void cmbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbTipoPedido.Text == "delivery")
+            if (cmbTipoPedido.Text == "Delivery")
             {
-                txtDireccionPedido.Enabled = true;
-            } else txtDireccionPedido.Enabled = false;
+                lbDireccion.Visible = true;
+                txtDireccionPedido.Visible = true;
+            }
+            else
+            {
+                lbDireccion.Visible = false;
+                txtDireccionPedido.Visible = false;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
