@@ -15,7 +15,7 @@ namespace CapaPresentacion
 {
     public partial class FormComprobante : Form
     {
-        List<EntPedido> listaPedido = LogPedido.Instancia.ListarPedido();
+        List<EntPedido> listaPedido = LogPedido.Instancia.ListarRegistrados();
         List<EntMetodoPago> listaMetodoPago = LogMetodoPago.Instancia.ListarMetodoPago();
         public FormComprobante()
         {

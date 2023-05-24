@@ -28,6 +28,12 @@ namespace CapaLogica
         {
             return DatPedido.Instancia.ListarPedido();
         }
+
+        public List<EntPedido> ListarRegistrados()
+        {
+            return DatPedido.Instancia.ListarRegistrados();
+        }
+
         public bool InsertarPedido(EntPedido pedido)
         {
             return DatPedido.Instancia.InsertarPedido(pedido);
