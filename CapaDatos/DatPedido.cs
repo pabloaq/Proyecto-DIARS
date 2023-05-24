@@ -62,6 +62,43 @@ namespace CapaDatos
             return lista;
         }
 
+        public List<EntPedido> ListarRegistrados()
+        {
+            SqlCommand cmd = null;
+            List<EntPedido> lista = new List<EntPedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spListarRegistrados", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntPedido pedido = new EntPedido();
+
+                    pedido.idPedido = Convert.ToString(dr["IdPedido"]);
+                    pedido.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                    pedido.idTipoPedido = Convert.ToString(dr["IdTipoPedido"]);
+                    pedido.direccion = Convert.ToString(dr["Direccion"]);
+                    pedido.fechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+                    pedido.estado = Convert.ToChar(dr["Estado"]);
+
+                    lista.Add(pedido);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
         public bool InsertarPedido(EntPedido Pedido)
         {
             SqlCommand cmd = null;

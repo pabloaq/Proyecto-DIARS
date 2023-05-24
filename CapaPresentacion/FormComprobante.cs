@@ -15,13 +15,16 @@ namespace CapaPresentacion
 {
     public partial class FormComprobante : Form
     {
-        List<EntPedido> listaPedido = LogPedido.Instancia.ListarPedido();
+        List<EntPedido> listaPedido = LogPedido.Instancia.ListarRegistrados();
         List<EntMetodoPago> listaMetodoPago = LogMetodoPago.Instancia.ListarMetodoPago();
         public FormComprobante()
         {
             InitializeComponent();
             listarCmbPedido();
             listarCmbMetodoPago();
+            MostrarDatosAdicionales();
+            cbxIdPedido.DropDownStyle = ComboBoxStyle.DropDownList;//Evita que el usuario pueda modificar el cuadro de texto
+            cbxMetodoPago.DropDownStyle = ComboBoxStyle.DropDownList;//Evita que el usuario pueda modificar el cuadro de texto
         }
 
         private void listarCmbPedido()
@@ -60,6 +63,11 @@ namespace CapaPresentacion
             return null;
         }
 
+        private void MostrarDatosAdicionales()
+        {
+            lbFechaDePago.Text = DateTime.Today.ToString();
+        }
+
         private void btnRealizarComprobante_Click(object sender, EventArgs e)
         {
             try
@@ -90,6 +98,18 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error al generar el comprobante" + ex);
             }
+        }
+
+        private void cbxIdPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EntComprobante comprobante = new EntComprobante();
+            comprobante.PedidoID = buscarPedidoPorNombreCliente(cbxIdPedido.Text).idPedido;
+            lbMontoTotal.Text = LogComprobante.Instancia.VerificarMontoTotal(comprobante).ToString();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
