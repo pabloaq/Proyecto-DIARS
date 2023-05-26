@@ -54,7 +54,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnComprobante = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCabecera = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -66,7 +66,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -80,9 +79,9 @@
             this.panelContenedor.Controls.Add(this.panel3);
             this.panelContenedor.Controls.Add(this.panel2);
             this.panelContenedor.Controls.Add(this.panel11);
-            this.panelContenedor.Location = new System.Drawing.Point(1, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(3, 3);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(230, 622);
+            this.panelContenedor.Size = new System.Drawing.Size(264, 648);
             this.panelContenedor.TabIndex = 0;
             // 
             // panel7
@@ -321,6 +320,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.label6);
             this.panel11.Controls.Add(this.btnComprobante);
             this.panel11.Location = new System.Drawing.Point(1, 547);
@@ -333,7 +333,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
             this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(92, 8);
+            this.label6.Location = new System.Drawing.Point(93, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 49);
             this.label6.TabIndex = 2;
@@ -347,40 +347,38 @@
             this.btnComprobante.ForeColor = System.Drawing.Color.White;
             this.btnComprobante.Image = ((System.Drawing.Image)(resources.GetObject("btnComprobante.Image")));
             this.btnComprobante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComprobante.Location = new System.Drawing.Point(-5, -9);
+            this.btnComprobante.Location = new System.Drawing.Point(-4, -6);
             this.btnComprobante.Name = "btnComprobante";
             this.btnComprobante.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnComprobante.Size = new System.Drawing.Size(312, 90);
+            this.btnComprobante.Size = new System.Drawing.Size(234, 90);
             this.btnComprobante.TabIndex = 4;
             this.btnComprobante.UseVisualStyleBackColor = false;
             this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Location = new System.Drawing.Point(231, 52);
+            this.panelPrincipal.Location = new System.Drawing.Point(642, 165);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(952, 558);
+            this.panelPrincipal.Size = new System.Drawing.Size(548, 486);
             this.panelPrincipal.TabIndex = 1;
             // 
-            // panel1
+            // panelCabecera
             // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(1, 403);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 74);
-            this.panel1.TabIndex = 0;
+            this.panelCabecera.Location = new System.Drawing.Point(242, 0);
+            this.panelCabecera.Name = "panelCabecera";
+            this.panelCabecera.Size = new System.Drawing.Size(953, 38);
+            this.panelCabecera.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
             this.label4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(93, 11);
+            this.label4.Location = new System.Drawing.Point(93, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 49);
+            this.label4.Size = new System.Drawing.Size(118, 49);
             this.label4.TabIndex = 2;
-            this.label4.Text = "PAGO TRABAJADOR";
+            this.label4.Text = "COMPROBANTE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAdmin
@@ -389,12 +387,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1195, 654);
-            this.Controls.Add(this.panelPrincipal);
+            this.ControlBox = false;
             this.Controls.Add(this.panelContenedor);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCabecera);
+            this.Controls.Add(this.panelPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -405,7 +407,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,8 +431,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnComprobante;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel9;
@@ -439,5 +438,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnMetodoPago;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panelCabecera;
+        private System.Windows.Forms.Label label4;
     }
 }

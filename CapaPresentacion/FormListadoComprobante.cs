@@ -29,5 +29,10 @@ namespace CapaPresentacion
         {
             dgvComprobante.DataSource = LogComprobante.Instancia.buscarComprobante(txtNombreCliente.Text);
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

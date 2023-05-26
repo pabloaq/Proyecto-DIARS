@@ -88,7 +88,7 @@ namespace CapaPresentacion
                     {
                         case 1:
                             this.Hide();
-                            FormAdmin paneladmin = new FormAdmin();
+                            formAdministrador paneladmin = new formAdministrador();
                             paneladmin.ShowDialog();
                             Close();
                             break;

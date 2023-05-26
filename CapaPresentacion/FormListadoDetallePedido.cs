@@ -28,5 +28,10 @@ namespace CapaPresentacion
         {
             dgvDetallePedido.DataSource = LogDetallePedido.Instancia.buscarDetallePedido(txtNombreCliente.Text);
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

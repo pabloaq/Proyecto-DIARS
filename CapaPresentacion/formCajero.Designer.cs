@@ -32,16 +32,6 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.menuVerical = new System.Windows.Forms.Panel();
-            this.btnMetodo = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCategoriaProd = new System.Windows.Forms.Button();
-            this.btnCategoriaMetPag = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnProducto = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnTipoPedido = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -55,6 +45,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             this.menuVerical.SuspendLayout();
             this.panelContenedor.SuspendLayout();
@@ -92,16 +83,7 @@
             // menuVerical
             // 
             this.menuVerical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.menuVerical.Controls.Add(this.btnMetodo);
-            this.menuVerical.Controls.Add(this.panel4);
-            this.menuVerical.Controls.Add(this.btnCategoriaProd);
-            this.menuVerical.Controls.Add(this.btnCategoriaMetPag);
-            this.menuVerical.Controls.Add(this.panel7);
-            this.menuVerical.Controls.Add(this.panel6);
-            this.menuVerical.Controls.Add(this.btnProducto);
-            this.menuVerical.Controls.Add(this.panel5);
-            this.menuVerical.Controls.Add(this.btnTipoPedido);
-            this.menuVerical.Controls.Add(this.panel3);
+            this.menuVerical.Controls.Add(this.btnAtras);
             this.menuVerical.Controls.Add(this.btnComprobante);
             this.menuVerical.Controls.Add(this.panel2);
             this.menuVerical.Controls.Add(this.panel1);
@@ -113,155 +95,21 @@
             this.menuVerical.Size = new System.Drawing.Size(220, 612);
             this.menuVerical.TabIndex = 2;
             // 
-            // btnMetodo
-            // 
-            this.btnMetodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnMetodo.FlatAppearance.BorderSize = 0;
-            this.btnMetodo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.btnMetodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMetodo.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.btnMetodo.ForeColor = System.Drawing.Color.White;
-            this.btnMetodo.Image = ((System.Drawing.Image)(resources.GetObject("btnMetodo.Image")));
-            this.btnMetodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMetodo.Location = new System.Drawing.Point(6, 444);
-            this.btnMetodo.Name = "btnMetodo";
-            this.btnMetodo.Size = new System.Drawing.Size(214, 45);
-            this.btnMetodo.TabIndex = 6;
-            this.btnMetodo.Text = "Método de Pago";
-            this.btnMetodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMetodo.UseVisualStyleBackColor = false;
-            this.btnMetodo.Click += new System.EventHandler(this.btnMetodo_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel4.Location = new System.Drawing.Point(0, 444);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(7, 45);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnCategoriaProd
-            // 
-            this.btnCategoriaProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnCategoriaProd.FlatAppearance.BorderSize = 0;
-            this.btnCategoriaProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.btnCategoriaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriaProd.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCategoriaProd.ForeColor = System.Drawing.Color.White;
-            this.btnCategoriaProd.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaProd.Image")));
-            this.btnCategoriaProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoriaProd.Location = new System.Drawing.Point(6, 383);
-            this.btnCategoriaProd.Name = "btnCategoriaProd";
-            this.btnCategoriaProd.Size = new System.Drawing.Size(214, 45);
-            this.btnCategoriaProd.TabIndex = 11;
-            this.btnCategoriaProd.Text = "Categoría Producto";
-            this.btnCategoriaProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCategoriaProd.UseVisualStyleBackColor = false;
-            this.btnCategoriaProd.Click += new System.EventHandler(this.btnCategoriaProd_Click);
-            // 
-            // btnCategoriaMetPag
-            // 
-            this.btnCategoriaMetPag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnCategoriaMetPag.FlatAppearance.BorderSize = 0;
-            this.btnCategoriaMetPag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.btnCategoriaMetPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriaMetPag.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCategoriaMetPag.ForeColor = System.Drawing.Color.White;
-            this.btnCategoriaMetPag.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaMetPag.Image")));
-            this.btnCategoriaMetPag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoriaMetPag.Location = new System.Drawing.Point(6, 507);
-            this.btnCategoriaMetPag.Name = "btnCategoriaMetPag";
-            this.btnCategoriaMetPag.Size = new System.Drawing.Size(214, 45);
-            this.btnCategoriaMetPag.TabIndex = 10;
-            this.btnCategoriaMetPag.Text = "Categoría Método de Pago";
-            this.btnCategoriaMetPag.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCategoriaMetPag.UseVisualStyleBackColor = false;
-            this.btnCategoriaMetPag.Click += new System.EventHandler(this.btnCategoriaMetPag_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel7.Location = new System.Drawing.Point(0, 383);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(7, 45);
-            this.panel7.TabIndex = 10;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel6.Location = new System.Drawing.Point(0, 507);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(7, 45);
-            this.panel6.TabIndex = 9;
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnProducto.FlatAppearance.BorderSize = 0;
-            this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.btnProducto.ForeColor = System.Drawing.Color.White;
-            this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
-            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(6, 316);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(214, 45);
-            this.btnProducto.TabIndex = 8;
-            this.btnProducto.Text = "Producto";
-            this.btnProducto.UseVisualStyleBackColor = false;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel5.Location = new System.Drawing.Point(0, 316);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(7, 45);
-            this.panel5.TabIndex = 7;
-            // 
-            // btnTipoPedido
-            // 
-            this.btnTipoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnTipoPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTipoPedido.FlatAppearance.BorderSize = 0;
-            this.btnTipoPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.btnTipoPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoPedido.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.btnTipoPedido.ForeColor = System.Drawing.Color.White;
-            this.btnTipoPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoPedido.Image")));
-            this.btnTipoPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoPedido.Location = new System.Drawing.Point(6, 254);
-            this.btnTipoPedido.Name = "btnTipoPedido";
-            this.btnTipoPedido.Size = new System.Drawing.Size(214, 45);
-            this.btnTipoPedido.TabIndex = 4;
-            this.btnTipoPedido.Text = "Tipo Pedido";
-            this.btnTipoPedido.UseVisualStyleBackColor = false;
-            this.btnTipoPedido.Click += new System.EventHandler(this.btnTipoPedido_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel3.Location = new System.Drawing.Point(0, 254);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 45);
-            this.panel3.TabIndex = 3;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel2.Location = new System.Drawing.Point(0, 190);
+            this.panel2.Location = new System.Drawing.Point(0, 261);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 45);
+            this.panel2.Size = new System.Drawing.Size(7, 67);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
-            this.panel1.Location = new System.Drawing.Point(0, 129);
+            this.panel1.Location = new System.Drawing.Point(0, 167);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(7, 45);
+            this.panel1.Size = new System.Drawing.Size(7, 67);
             this.panel1.TabIndex = 0;
             // 
             // panelContenedor
@@ -317,15 +165,15 @@
             this.btnComprobante.FlatAppearance.BorderSize = 0;
             this.btnComprobante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
             this.btnComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprobante.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.btnComprobante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprobante.ForeColor = System.Drawing.Color.White;
             this.btnComprobante.Image = ((System.Drawing.Image)(resources.GetObject("btnComprobante.Image")));
             this.btnComprobante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComprobante.Location = new System.Drawing.Point(6, 190);
+            this.btnComprobante.Location = new System.Drawing.Point(6, 261);
             this.btnComprobante.Name = "btnComprobante";
-            this.btnComprobante.Size = new System.Drawing.Size(214, 45);
+            this.btnComprobante.Size = new System.Drawing.Size(214, 67);
             this.btnComprobante.TabIndex = 2;
-            this.btnComprobante.Text = "Comprobante";
+            this.btnComprobante.Text = "       Comprobante";
             this.btnComprobante.UseVisualStyleBackColor = false;
             this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
             // 
@@ -335,13 +183,13 @@
             this.btnPedido.FlatAppearance.BorderSize = 0;
             this.btnPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(93)))), ((int)(((byte)(4)))));
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedido.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPedido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.ForeColor = System.Drawing.Color.White;
             this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
             this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedido.Location = new System.Drawing.Point(6, 129);
+            this.btnPedido.Location = new System.Drawing.Point(6, 167);
             this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(214, 45);
+            this.btnPedido.Size = new System.Drawing.Size(214, 67);
             this.btnPedido.TabIndex = 0;
             this.btnPedido.Text = "Pedido";
             this.btnPedido.UseVisualStyleBackColor = false;
@@ -350,7 +198,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -410,6 +258,25 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(0, 563);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(186, 49);
+            this.btnAtras.TabIndex = 2;
+            this.btnAtras.Text = "Cerrar Sesion";
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // formCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +287,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formCajero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formCajero";
@@ -453,18 +321,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnComprobante;
-        private System.Windows.Forms.Button btnMetodo;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnCategoriaProd;
-        private System.Windows.Forms.Button btnCategoriaMetPag;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnProducto;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnTipoPedido;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelEscritorio;
         private System.Windows.Forms.Label nameTitulo;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

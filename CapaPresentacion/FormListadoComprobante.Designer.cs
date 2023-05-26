@@ -35,6 +35,7 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.btnReporte = new System.Windows.Forms.Button();
             this.dgvComprobante = new System.Windows.Forms.DataGridView();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprobante)).BeginInit();
             this.SuspendLayout();
@@ -109,12 +110,30 @@
             this.dgvComprobante.Size = new System.Drawing.Size(642, 305);
             this.dgvComprobante.TabIndex = 21;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAtras.Location = new System.Drawing.Point(79, 409);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(106, 29);
+            this.btnAtras.TabIndex = 23;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // FormListadoComprobante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.dgvComprobante);
             this.Controls.Add(this.label6);
@@ -139,5 +158,6 @@
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.DataGridView dgvComprobante;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
