@@ -94,16 +94,6 @@ namespace CapaPresentacion
                 btnPedido.BackColor = Color.FromArgb(250, 163, 7);
             if (Application.OpenForms["formComprobantePago"] == null)
                 btnComprobante.BackColor = Color.FromArgb(250, 163, 7);
-            if (Application.OpenForms["FormTipoPedido"] == null)
-                btnTipoPedido.BackColor = Color.FromArgb(250, 163, 7);
-            if (Application.OpenForms["FormProducto"] == null)
-                btnProducto.BackColor = Color.FromArgb(250, 163, 7);
-            if (Application.OpenForms["FormCategoriaMetodoPago"] == null)
-                btnCategoriaMetPag.BackColor = Color.FromArgb(250, 163, 7);
-            if (Application.OpenForms["FormMetodoPago"] == null)
-                btnMetodo.BackColor = Color.FromArgb(250, 163, 7);
-            if (Application.OpenForms["FormCategoriaProducto"] == null)
-                btnCategoriaProd.BackColor = Color.FromArgb(250, 163, 7);
         }
 
         private void btnPedido_Click(object sender, EventArgs e)
@@ -120,37 +110,16 @@ namespace CapaPresentacion
         {
 
             AbrirForm<FormComprobante>();
+            btnPedido.BackColor = Color.FromArgb(232, 93, 4);
 
         }
 
-        private void btnTipoPedido_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            AbrirForm<FormTipoPedido>();
-            btnTipoPedido.BackColor = Color.FromArgb(232, 93, 4);
-        }
-
-        private void btnProducto_Click(object sender, EventArgs e)
-        {
-            AbrirForm<FormProducto>();
-            btnProducto.BackColor = Color.FromArgb(232, 93, 4);
-        }
-
-        private void btnMetodo_Click(object sender, EventArgs e)
-        {
-            AbrirForm<FormMetodoPago>();
-            btnMetodo.BackColor = Color.FromArgb(232, 93, 4);
-        }
-
-        private void btnCategoriaMetPag_Click(object sender, EventArgs e)
-        {
-            AbrirForm<FormCategoriaMetodoPago>();
-            btnCategoriaMetPag.BackColor = Color.FromArgb(232, 93, 4);
-        }
-
-        private void btnCategoriaProd_Click(object sender, EventArgs e)
-        {
-            AbrirForm<FormCategoriaProducto>();
-            btnCategoriaProd.BackColor = Color.FromArgb(232, 93, 4);
+            FormLogin form = new FormLogin();
+            Hide();
+            form.ShowDialog();
+            Close();
         }
     }
 }
