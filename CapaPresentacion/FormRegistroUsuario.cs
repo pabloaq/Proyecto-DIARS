@@ -88,39 +88,6 @@ namespace CapaPresentacion
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                
-                    if (txtUsername.Text != "" && txtPassword.Text != "" && txtPassword.Text != "" && txtDNI.Text.Length == 8)
-                    {
-                        if (txtPassword.Text == txtCONPassword.Text) {
-                            EntUsuario user = new EntUsuario();
-
-                            user.username = txtUsername.Text;
-                            user.contrasenia = txtPassword.Text;
-                            user.dni = txtDNI.Text;
-                            user.rol = buscarRolPorNombre(cmbRol.Text).idrol;
-                            dynamic respuesta = apidni.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDNI.Text + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtnYXJjaWFtaXJAZ21haWwuY29tIn0.DmnmjodKhFK8W0vDUGg6vHgpgqDK1Qa1hFJZ82k-SCo");
-                            user.apellido = respuesta.apellidoPaterno.ToString() + " " + respuesta.apellidoMaterno.ToString();
-                            user.nombres = respuesta.nombres;
-                            logUser.Instancia.registrarUsuario(user);
-                            MessageBox.Show("El usuario se registro correctamente.");
-                        }
-                        else
-                            MessageBox.Show("La contraseña no coincide");
-                    }
-                    else
-                        MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("DNI invalido.Ingrese otro DNI");
-            }
-            //limpiarVariables();
-        }
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             if (txtUsername.Text == "Username")
@@ -191,6 +158,46 @@ namespace CapaPresentacion
                 txtDNI.Text = "DNI";
                 txtDNI.ForeColor = Color.Silver;
             }
+        }
+
+        private void btnAtras_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (txtUsername.Text != "" && txtPassword.Text != "" && txtPassword.Text != "" && txtDNI.Text.Length == 8)
+                {
+                    if (txtPassword.Text == txtCONPassword.Text)
+                    {
+                        EntUsuario user = new EntUsuario();
+
+                        user.username = txtUsername.Text;
+                        user.contrasenia = txtPassword.Text;
+                        user.dni = txtDNI.Text;
+                        user.rol = buscarRolPorNombre(cmbRol.Text).idrol;
+                        dynamic respuesta = apidni.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDNI.Text + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtnYXJjaWFtaXJAZ21haWwuY29tIn0.DmnmjodKhFK8W0vDUGg6vHgpgqDK1Qa1hFJZ82k-SCo");
+                        user.apellido = respuesta.apellidoPaterno.ToString() + " " + respuesta.apellidoMaterno.ToString();
+                        user.nombres = respuesta.nombres;
+                        logUser.Instancia.registrarUsuario(user);
+                        MessageBox.Show("El usuario se registro correctamente.");
+                    }
+                    else
+                        MessageBox.Show("La contraseña no coincide");
+                }
+                else
+                    MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DNI invalido.Ingrese otro DNI");
+            }
+            //limpiarVariables();
         }
     }
 }
