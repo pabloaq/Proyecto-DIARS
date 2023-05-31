@@ -126,6 +126,87 @@ namespace CapaDatos
 
             return inserta;
         }
+
+        //****/
+        public List<EntDetallePedido> BuscarDetallePedidoID(string idPedido)
+        {
+            SqlCommand cmd = null;
+            List<EntDetallePedido> lista = new List<EntDetallePedido>();
+
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spBuscarDetallePedidoID", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdPedido", idPedido);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    EntDetallePedido detallePedido = new EntDetallePedido();
+
+                    detallePedido.idProducto = Convert.ToString(dr["Nombre"]);
+                    detallePedido.idPedido = Convert.ToString(dr["NombreCliente"]);
+                    detallePedido.cantidad = Convert.ToInt32(dr["cantidad"]);
+
+                    lista.Add(detallePedido);
+                }
+
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar el detalle del pedido: " + ex.Message);
+            }
+            finally
+            {
+                if (cmd != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+
+            return lista;
+        }/*
+        public List<EntDetallePedido> ListarDetallePedidoPorIdPedido(string idPedido)
+        {
+            SqlCommand cmd = null;
+            List<EntDetallePedido> lista = new List<EntDetallePedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar; //singleton
+                cmd = new SqlCommand("spListarDetallePedidoPorIdPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdPedido", idPedido);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntDetallePedido detallePedido = new EntDetallePedido();
+
+                    detallePedido.idProducto = Convert.ToString(dr["Nombre"]);
+                    detallePedido.idPedido = Convert.ToString(dr["NombreCliente"]);
+                    detallePedido.cantidad = Convert.ToInt32(dr["cantidad"]);
+
+                    lista.Add(detallePedido);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }*/
+        ///****/
         #endregion Metodos
     }
 }

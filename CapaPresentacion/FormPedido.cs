@@ -212,7 +212,7 @@ namespace CapaPresentacion
                 detPedido.cantidad = Convert.ToInt32(fila.Cells[2].Value);
 
                 LogDetallePedido.Instancia.InsertarDetallePedido(detPedido);
-            }
+            } 
             limpiarEntradasDetPedido();
             limpiarEntradasPedido();
             dgvDetPedido.Rows.Clear();//elimina las filas de la coleccion
