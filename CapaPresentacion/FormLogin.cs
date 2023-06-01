@@ -113,5 +113,14 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                btnLogin.PerformClick();
+            }
+        }
     }
 }

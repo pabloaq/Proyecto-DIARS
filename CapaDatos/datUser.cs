@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaDatos
 {
@@ -73,6 +71,10 @@ namespace CapaDatos
                 if (contra == user.contrasenia)
                 {
                     validacion = true;
+                }
+                else
+                {
+                    MessageBox.Show("CONTRASEÑA INCORRECTA", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)

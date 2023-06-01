@@ -35,11 +35,6 @@
             this.ptnMax = new System.Windows.Forms.PictureBox();
             this.ptnClose = new System.Windows.Forms.PictureBox();
             this.panelVERTICAL = new System.Windows.Forms.Panel();
-            this.subReport = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,19 +50,24 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCatProduct = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.subReport = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panelEscritorio = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.nameTitulo = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBARRA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptnClose)).BeginInit();
             this.panelVERTICAL.SuspendLayout();
-            this.subReport.SuspendLayout();
             this.panelSubVert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.subReport.SuspendLayout();
             this.panelEscritorio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -161,68 +161,6 @@
             this.panelVERTICAL.Name = "panelVERTICAL";
             this.panelVERTICAL.Size = new System.Drawing.Size(200, 712);
             this.panelVERTICAL.TabIndex = 1;
-            // 
-            // subReport
-            // 
-            this.subReport.Controls.Add(this.panel9);
-            this.subReport.Controls.Add(this.btnPedidos);
-            this.subReport.Controls.Add(this.panel8);
-            this.subReport.Controls.Add(this.btnVentas);
-            this.subReport.Location = new System.Drawing.Point(27, 619);
-            this.subReport.Name = "subReport";
-            this.subReport.Size = new System.Drawing.Size(173, 81);
-            this.subReport.TabIndex = 0;
-            this.subReport.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel9.Location = new System.Drawing.Point(-3, 42);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 36);
-            this.panel9.TabIndex = 15;
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.ForeColor = System.Drawing.Color.Black;
-            this.btnPedidos.Location = new System.Drawing.Point(3, 42);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPedidos.Size = new System.Drawing.Size(170, 36);
-            this.btnPedidos.TabIndex = 16;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = false;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Location = new System.Drawing.Point(-3, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 36);
-            this.panel8.TabIndex = 13;
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.ForeColor = System.Drawing.Color.Black;
-            this.btnVentas.Location = new System.Drawing.Point(3, 0);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVentas.Size = new System.Drawing.Size(170, 36);
-            this.btnVentas.TabIndex = 14;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // panel6
             // 
@@ -419,6 +357,68 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // subReport
+            // 
+            this.subReport.Controls.Add(this.panel9);
+            this.subReport.Controls.Add(this.btnPedidos);
+            this.subReport.Controls.Add(this.panel8);
+            this.subReport.Controls.Add(this.btnVentas);
+            this.subReport.Location = new System.Drawing.Point(27, 619);
+            this.subReport.Name = "subReport";
+            this.subReport.Size = new System.Drawing.Size(173, 81);
+            this.subReport.TabIndex = 0;
+            this.subReport.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel9.Location = new System.Drawing.Point(-3, 42);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 36);
+            this.panel9.TabIndex = 15;
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.ForeColor = System.Drawing.Color.Black;
+            this.btnPedidos.Location = new System.Drawing.Point(3, 42);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPedidos.Size = new System.Drawing.Size(170, 36);
+            this.btnPedidos.TabIndex = 16;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel8.Location = new System.Drawing.Point(-3, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 36);
+            this.panel8.TabIndex = 13;
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.Black;
+            this.btnVentas.Location = new System.Drawing.Point(3, 0);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVentas.Size = new System.Drawing.Size(170, 36);
+            this.btnVentas.TabIndex = 14;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
             // panelEscritorio
             // 
             this.panelEscritorio.Controls.Add(this.nameTitulo);
@@ -428,6 +428,18 @@
             this.panelEscritorio.Name = "panelEscritorio";
             this.panelEscritorio.Size = new System.Drawing.Size(1100, 712);
             this.panelEscritorio.TabIndex = 2;
+            // 
+            // nameTitulo
+            // 
+            this.nameTitulo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.nameTitulo.AutoSize = true;
+            this.nameTitulo.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.nameTitulo.Location = new System.Drawing.Point(451, 541);
+            this.nameTitulo.Name = "nameTitulo";
+            this.nameTitulo.Size = new System.Drawing.Size(272, 33);
+            this.nameTitulo.TabIndex = 2;
+            this.nameTitulo.Text = "Pollería Wilson-Admin";
             // 
             // pictureBox2
             // 
@@ -441,18 +453,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // nameTitulo
-            // 
-            this.nameTitulo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.nameTitulo.AutoSize = true;
-            this.nameTitulo.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.nameTitulo.Location = new System.Drawing.Point(451, 541);
-            this.nameTitulo.Name = "nameTitulo";
-            this.nameTitulo.Size = new System.Drawing.Size(272, 33);
-            this.nameTitulo.TabIndex = 2;
-            this.nameTitulo.Text = "Pollería Wilson-Admin";
             // 
             // formAdministrador
             // 
@@ -473,10 +473,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptnClose)).EndInit();
             this.panelVERTICAL.ResumeLayout(false);
-            this.subReport.ResumeLayout(false);
             this.panelSubVert.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.subReport.ResumeLayout(false);
             this.panelEscritorio.ResumeLayout(false);
             this.panelEscritorio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
