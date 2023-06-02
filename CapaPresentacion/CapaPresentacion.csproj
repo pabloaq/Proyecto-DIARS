@@ -115,12 +115,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDWILSONDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAdmin.Designer.cs">
-      <DependentUpon>FormAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="formAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +133,6 @@
     <Compile Include="FormCategoriaProducto.Designer.cs">
       <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCocinero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCocinero.Designer.cs">
-      <DependentUpon>FormCocinero.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormComprobante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +144,6 @@
     </Compile>
     <Compile Include="FormDetallePedidoCocina.Designer.cs">
       <DependentUpon>FormDetallePedidoCocina.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEJEMPLO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEJEMPLO.Designer.cs">
-      <DependentUpon>FormEJEMPLO.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEstadoPedido2.cs">
       <SubType>Form</SubType>
@@ -205,12 +187,6 @@
     <Compile Include="FormPedido.Designer.cs">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPedidosEntregados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPedidosEntregados.Designer.cs">
-      <DependentUpon>FormPedidosEntregados.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +205,12 @@
     <Compile Include="FormRegistroUsuario.Designer.cs">
       <DependentUpon>FormRegistroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporteComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteComprobante.Designer.cs">
+      <DependentUpon>FormReporteComprobante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReporteDetallePedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,9 +226,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="FormAdmin.resx">
-      <DependentUpon>FormAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formAdministrador.resx">
       <DependentUpon>formAdministrador.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -260,17 +239,11 @@
     <EmbeddedResource Include="FormCategoriaProducto.resx">
       <DependentUpon>FormCategoriaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCocinero.resx">
-      <DependentUpon>FormCocinero.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormComprobante.resx">
       <DependentUpon>FormComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallePedidoCocina.resx">
       <DependentUpon>FormDetallePedidoCocina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEJEMPLO.resx">
-      <DependentUpon>FormEJEMPLO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEstadoPedido2.resx">
       <DependentUpon>FormEstadoPedido2.cs</DependentUpon>
@@ -287,9 +260,6 @@
     <EmbeddedResource Include="FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPedidosEntregados.resx">
-      <DependentUpon>FormPedidosEntregados.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormProducto.resx">
       <DependentUpon>FormProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroUsuario.resx">
       <DependentUpon>FormRegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteComprobante.resx">
+      <DependentUpon>FormReporteComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporteDetallePedido.resx">
       <DependentUpon>FormReporteDetallePedido.cs</DependentUpon>
@@ -318,6 +291,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteComprobante.rdlc" />
     <EmbeddedResource Include="ReporteDetallePedido.rdlc" />
     <None Include="BDWILSONDataSet.xsc">
       <DependentUpon>BDWILSONDataSet.xsd</DependentUpon>

@@ -33,5 +33,11 @@ namespace CapaPresentacion
         {
             Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            FormReporteDetallePedido rpt = new FormReporteDetallePedido();
+            rpt.ShowDialog();
+        }
     }
 }

@@ -124,15 +124,7 @@ namespace CapaPresentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            // Ocultar el formulario actual
-            this.Close();
-
-            // Mostrar el formulario anterior que ya está en memoria
-            FormAdmin formAdmin = Application.OpenForms.OfType<FormAdmin>().FirstOrDefault();
-            if (formAdmin != null)
-            {
-                formAdmin.Show();
-            }
+            
         }
 
 

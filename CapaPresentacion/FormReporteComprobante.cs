@@ -1,38 +1,36 @@
-﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
-using Microsoft.Reporting.WinForms;
+﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class FormReporteDetallePedido : Form
+    public partial class FormReporteComprobante : Form
     {
         public System.Drawing.Point MoveForm_MousePosition;
-        public FormReporteDetallePedido()
+        public FormReporteComprobante()
         {
             InitializeComponent();
         }
 
-        private void FormReporteDetallePedido_Load(object sender, EventArgs e)
+        private void FormReporteComprobante_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bDWILSONDataSet.DetallePedido' Puede moverla o quitarla según sea necesario.
-            this.detallePedidoTableAdapter.Fill(this.bDWILSONDataSet.DetallePedido);
+            // TODO: esta línea de código carga datos en la tabla 'bDWILSONDataSet.Comprobante' Puede moverla o quitarla según sea necesario.
+            this.comprobanteTableAdapter.Fill(this.bDWILSONDataSet.Comprobante);
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("sDate", " "));
             reportParameters.Add(new ReportParameter("eDate", " "));
-            reporteDetallePedido.LocalReport.SetParameters(reportParameters);
-            this.reporteDetallePedido.RefreshReport();
+            reporteComprobante.LocalReport.SetParameters(reportParameters);
+            this.reporteComprobante.RefreshReport();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            this.detallePedidoTableAdapter.filterDate(this.bDWILSONDataSet.DetallePedido, dtInicio.Value.ToString("yyyy/MM/dd"), dtFin.Value.ToString("yyyy/MM/dd"));
+            this.comprobanteTableAdapter.filterDate(this.bDWILSONDataSet.Comprobante, dtInicio.Value.ToString("yyyy/MM/dd"), dtFin.Value.ToString("yyyy/MM/dd"));
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("sDate", dtInicio.Value.ToString("yyyy/MM/dd")));
             reportParameters.Add(new ReportParameter("eDate", dtFin.Value.ToString("yyyy/MM/dd")));
-            reporteDetallePedido.LocalReport.SetParameters(reportParameters);
-            this.reporteDetallePedido.RefreshReport();
+            reporteComprobante.LocalReport.SetParameters(reportParameters);
+            this.reporteComprobante.RefreshReport();
         }
 
         private void ptnClose_Click(object sender, EventArgs e)

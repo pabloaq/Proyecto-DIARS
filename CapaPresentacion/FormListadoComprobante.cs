@@ -34,5 +34,11 @@ namespace CapaPresentacion
         {
             Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            FormReporteComprobante rpt = new FormReporteComprobante();
+            rpt.ShowDialog();
+        }
     }
 }

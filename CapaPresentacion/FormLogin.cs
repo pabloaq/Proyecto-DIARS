@@ -92,7 +92,7 @@ namespace CapaPresentacion
                             paneladmin.ShowDialog();
                             Close();
                             break;
-                        case 2:
+                        case 4:
                             this.Hide();
                             formCajero panelcajero = new formCajero();
                             panelcajero.ShowDialog();

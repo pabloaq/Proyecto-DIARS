@@ -97,6 +97,7 @@
             this.btnReporte.TabIndex = 22;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // dgvComprobante
             // 
