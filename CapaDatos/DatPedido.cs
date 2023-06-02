@@ -99,6 +99,7 @@ namespace CapaDatos
             return lista;
         }
 
+
         public bool InsertarPedido(EntPedido Pedido)
         {
             SqlCommand cmd = null;
@@ -159,6 +160,121 @@ namespace CapaDatos
 
             return modifico;
         }
+        //******en
+        public List<EntPedido> ListarPedidosPagados()
+        {
+            SqlCommand cmd = null;
+            List<EntPedido> lista = new List<EntPedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spListarPedidosPagados", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntPedido pedido = new EntPedido();
+
+                    pedido.idPedido = Convert.ToString(dr["IdPedido"]);
+                    pedido.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                    pedido.idTipoPedido = Convert.ToString(dr["IdTipoPedido"]);
+                    pedido.direccion = Convert.ToString(dr["Direccion"]);
+                    pedido.fechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+
+                    pedido.estado = Convert.ToChar(dr["Estado"]); // Leer el estado del pedido
+
+
+                    lista.Add(pedido);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
+        public bool CambiarEstadoPedido(string idPedido, string nuevoEstado)
+        {
+            SqlCommand cmd = null;
+            bool actualizado = false;
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spCambiarEstadoPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdPedido", idPedido);
+                cmd.Parameters.AddWithValue("@NuevoEstado", nuevoEstado);
+
+                cn.Open();
+                int filasAfectadas = cmd.ExecuteNonQuery();
+                if (filasAfectadas > 0)
+                {
+                    actualizado = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return actualizado;
+        }
+        public List<EntPedido> ListarPedidosEntregados()
+        {
+            SqlCommand cmd = null;
+            List<EntPedido> lista = new List<EntPedido>();
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("spListarPedidosEntregados", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntPedido pedido = new EntPedido();
+
+                    pedido.idPedido = Convert.ToString(dr["IdPedido"]);
+                    pedido.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                    pedido.idTipoPedido = Convert.ToString(dr["IdTipoPedido"]);
+                    pedido.direccion = Convert.ToString(dr["Direccion"]);
+                    pedido.fechaRegistro = Convert.ToDateTime(dr["FechaRegistro"] is DBNull ? null : dr["FechaRegistro"]);
+
+                    pedido.estado = Convert.ToChar(dr["Estado"]);
+
+                    lista.Add(pedido);
+                }
+                // Ordenar la lista en orden descendente por fecha de registro
+                lista = lista.OrderByDescending(p => p.fechaRegistro).ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+      
+        //********///
+
+
+
+
+
+
 
         /*public EntPedido UltimoPedido()
         {

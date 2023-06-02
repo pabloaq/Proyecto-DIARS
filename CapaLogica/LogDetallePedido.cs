@@ -38,6 +38,19 @@ namespace CapaLogica
         {
             return DatDetallePedido.Instancia.InsertarDetallePedido(detallePedido);
         }
+        ///******
+        public List<EntDetallePedido> BuscarDetallePedidoID(string idPedido)
+        {
+            try
+            {
+                return DatDetallePedido.Instancia.BuscarDetallePedidoID(idPedido);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar el detalle del pedido: " + ex.Message);
+            }
+        }
+        //////****
         #endregion Metodos
     }
 }

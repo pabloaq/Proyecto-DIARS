@@ -43,6 +43,25 @@ namespace CapaLogica
         {
             return DatPedido.Instancia.ModificarEstadoPedido(pedido);
         }
+        //---ess
+        public List<EntPedido> ListarPedidosPagados()
+        {
+            List<EntPedido> pedidos = DatPedido.Instancia.ListarPedidosPagados();
+            
+            pedidos = pedidos.OrderByDescending(p => p.fechaRegistro).ToList();
+            return pedidos;
+        }
+
+        public bool CambiarEstadoPedido(string idPedido, string nuevoEstado)
+        {
+            return DatPedido.Instancia.CambiarEstadoPedido(idPedido, nuevoEstado);
+        }
+        public List<EntPedido> ListarPedidosEntregados()
+        {
+            return DatPedido.Instancia.ListarPedidosEntregados();
+        }
+
+        //---ess
 
         /*public EntPedido UltimoPedido()
         {
