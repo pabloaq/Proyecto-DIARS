@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaDatos;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             listaDetallePedido();
+            cambiarNombreTablas();
         }
 
         private void listaDetallePedido()
@@ -38,6 +40,13 @@ namespace CapaPresentacion
         {
             FormReporteDetallePedido rpt = new FormReporteDetallePedido();
             rpt.ShowDialog();
+        }
+
+        private void cambiarNombreTablas()
+        {
+            dgvDetallePedido.Columns["idProducto"].HeaderText = "Codigo de Producto";
+            dgvDetallePedido.Columns["idPedido"].HeaderText = "Nombre de Cliente";
+            dgvDetallePedido.Columns["cantidad"].HeaderText = "Cantidad";
         }
     }
 }

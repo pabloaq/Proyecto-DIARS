@@ -18,7 +18,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             listaComprobante();
+            cambiarNombresTabla();
         }
+
+
 
         private void listaComprobante()
         {
@@ -39,6 +42,15 @@ namespace CapaPresentacion
         {
             FormReporteComprobante rpt = new FormReporteComprobante();
             rpt.ShowDialog();
+        }
+
+        private void cambiarNombresTabla()
+        {
+            dgvComprobante.Columns["IdComprobante"].HeaderText = "Codigo Comprobante";
+            dgvComprobante.Columns["PedidoID"].HeaderText = "Nombre de Cliente";
+            dgvComprobante.Columns["MetodopagoID"].HeaderText = "Metodo de pago";
+            dgvComprobante.Columns["montoTotal"].HeaderText = "Monto Total";
+            dgvComprobante.Columns["FechaRegistro"].HeaderText = "Fecha de Registro";
         }
     }
 }
