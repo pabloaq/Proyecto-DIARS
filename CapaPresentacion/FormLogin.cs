@@ -118,6 +118,7 @@ namespace CapaPresentacion
         {
             if(e.KeyCode == Keys.Enter)
             {
+
                 e.Handled = true;
                 btnLogin.PerformClick();
             }
