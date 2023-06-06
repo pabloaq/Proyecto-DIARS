@@ -92,6 +92,12 @@ namespace CapaPresentacion
                             paneladmin.ShowDialog();
                             Close();
                             break;
+                        case 2:
+                        case 3:
+                            this.Hide();
+                            FormEstadoPedido2 panelCocinero = new FormEstadoPedido2();
+                            panelCocinero.ShowDialog();
+                            break;
                         case 4:
                             this.Hide();
                             formCajero panelcajero = new formCajero();
