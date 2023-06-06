@@ -784,7 +784,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>="Perido: " + Parameters!sDate.Value + " a " + Parameters!eDate.Value</Value>
+                          <Value>="Periodo: " + Parameters!sDate.Value + " a " + Parameters!eDate.Value</Value>
                           <Style>
                             <FontFamily>Calibri Light</FontFamily>
                             <FontSize>12pt</FontSize>
