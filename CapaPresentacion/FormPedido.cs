@@ -154,10 +154,13 @@ namespace CapaPresentacion
                 foreach (EntProducto producto in listaProducto)
                 {
                     if (producto.Nombre.Equals(cmbProducto.Text))
+                    {
                         dgvDetPedido.Rows[celda].Cells[1].Value = producto.IdProducto.ToString();
+                        dgvDetPedido.Rows[celda].Cells[2].Value = producto.Nombre.ToString();
+                    }
                 }
             }
-            dgvDetPedido.Rows[celda].Cells[2].Value = cantidadProducto.ToString();
+            dgvDetPedido.Rows[celda].Cells[3].Value = cantidadProducto.ToString();
             limpiarEntradasDetPedido();
         }
 
@@ -172,7 +175,7 @@ namespace CapaPresentacion
                     if (producto.IdProducto.Equals(dgvDetPedido.Rows[index].Cells[1].Value))
                         cmbProducto.Text = producto.Nombre.ToString();
                 }
-                cantidadProducto = int.Parse(dgvDetPedido.Rows[index].Cells[2].Value.ToString());
+                cantidadProducto = int.Parse(dgvDetPedido.Rows[index].Cells[3].Value.ToString());
                 lbCantidadProducto.Text = cantidadProducto.ToString(); //actualizando el valor del label
             }
         }
@@ -194,8 +197,11 @@ namespace CapaPresentacion
                 foreach (EntProducto producto in listaProducto)
                 {
                     if (producto.Nombre.Equals(cmbProducto.Text))
+                    {
                         dgvDetPedido.Rows[index].Cells[1].Value = producto.IdProducto.ToString();
-                    dgvDetPedido.Rows[index].Cells[2].Value = cantidadProducto.ToString();
+                        dgvDetPedido.Rows[index].Cells[2].Value = producto.Nombre.ToString();
+                    }
+                    dgvDetPedido.Rows[index].Cells[3].Value = cantidadProducto.ToString();
                 }
 
             }
@@ -209,7 +215,7 @@ namespace CapaPresentacion
                 EntDetallePedido detPedido = new EntDetallePedido();
                 detPedido.idPedido = Convert.ToString(fila.Cells[0].Value);
                 detPedido.idProducto = Convert.ToString(fila.Cells[1].Value);
-                detPedido.cantidad = Convert.ToInt32(fila.Cells[2].Value);
+                detPedido.cantidad = Convert.ToInt32(fila.Cells[3].Value);
 
                 LogDetallePedido.Instancia.InsertarDetallePedido(detPedido);
             } 
