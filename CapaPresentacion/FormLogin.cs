@@ -16,7 +16,8 @@ namespace CapaPresentacion
 {
     public partial class FormLogin : Form
     {
-
+        public System.Drawing.Point MoveForm_MousePosition;
+        public System.Drawing.Point MoveForm_MousePosition2;
         public FormLogin()
         {
             InitializeComponent();
@@ -127,6 +128,36 @@ namespace CapaPresentacion
 
                 e.Handled = true;
                 btnLogin.PerformClick();
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoveForm_MousePosition = new System.Drawing.Point(-e.X, -e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                System.Drawing.Point mousePosition = Control.MousePosition;
+                mousePosition.Offset(MoveForm_MousePosition.X, MoveForm_MousePosition.Y);
+                this.Location = mousePosition;
+            }
+        }
+
+        private void FormLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoveForm_MousePosition2 = new System.Drawing.Point(-e.X, -e.Y);
+        }
+
+        private void FormLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                System.Drawing.Point mousePosition = Control.MousePosition;
+                mousePosition.Offset(MoveForm_MousePosition2.X, MoveForm_MousePosition2.Y);
+                this.Location = mousePosition;
             }
         }
     }
