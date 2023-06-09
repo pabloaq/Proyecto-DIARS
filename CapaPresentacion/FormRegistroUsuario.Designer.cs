@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
@@ -297,6 +298,7 @@
             this.Controls.Add(this.btnDNI);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRegistroUsuario";
             this.Text = "FormRegistroUsuario";
             this.Load += new System.EventHandler(this.FormRegistroUsuario_Load);
