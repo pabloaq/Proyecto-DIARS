@@ -110,7 +110,7 @@ namespace CapaPresentacion
         {
 
             AbrirForm<FormComprobante>();
-            btnPedido.BackColor = Color.FromArgb(232, 93, 4);
+            btnComprobante.BackColor = Color.FromArgb(232, 93, 4);
 
         }
 

@@ -65,10 +65,9 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAtras.Location = new System.Drawing.Point(266, 443);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Location = new System.Drawing.Point(200, 360);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(141, 46);
+            this.btnAtras.Size = new System.Drawing.Size(106, 37);
             this.btnAtras.TabIndex = 13;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -78,10 +77,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(578, 431);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(434, 350);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -98,9 +96,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnCambiarEstado);
             this.panel1.Controls.Add(this.dgvPedidosPagados);
-            this.panel1.Location = new System.Drawing.Point(266, 12);
+            this.panel1.Location = new System.Drawing.Point(200, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 412);
+            this.panel1.Size = new System.Drawing.Size(610, 335);
             this.panel1.TabIndex = 12;
             // 
             // btnDetallePedidosEntregados
@@ -113,9 +112,10 @@
             this.btnDetallePedidosEntregados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetallePedidosEntregados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetallePedidosEntregados.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDetallePedidosEntregados.Location = new System.Drawing.Point(646, 353);
+            this.btnDetallePedidosEntregados.Location = new System.Drawing.Point(484, 287);
+            this.btnDetallePedidosEntregados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDetallePedidosEntregados.Name = "btnDetallePedidosEntregados";
-            this.btnDetallePedidosEntregados.Size = new System.Drawing.Size(153, 47);
+            this.btnDetallePedidosEntregados.Size = new System.Drawing.Size(115, 38);
             this.btnDetallePedidosEntregados.TabIndex = 12;
             this.btnDetallePedidosEntregados.Text = "Ver Detalle";
             this.btnDetallePedidosEntregados.UseVisualStyleBackColor = false;
@@ -131,9 +131,10 @@
             this.btnActualizarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarPedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizarPedido.Location = new System.Drawing.Point(312, 353);
+            this.btnActualizarPedido.Location = new System.Drawing.Point(234, 287);
+            this.btnActualizarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizarPedido.Name = "btnActualizarPedido";
-            this.btnActualizarPedido.Size = new System.Drawing.Size(135, 47);
+            this.btnActualizarPedido.Size = new System.Drawing.Size(101, 38);
             this.btnActualizarPedido.TabIndex = 11;
             this.btnActualizarPedido.Text = "Actualizar";
             this.btnActualizarPedido.UseVisualStyleBackColor = false;
@@ -142,10 +143,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 14);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 49);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -156,10 +156,9 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(147)))), ((int)(((byte)(72)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(90, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(68, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(329, 41);
+            this.label3.Size = new System.Drawing.Size(261, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lista Pedidos Pagados";
             // 
@@ -175,9 +174,10 @@
             this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(17, 353);
+            this.btnCambiarEstado.Location = new System.Drawing.Point(13, 287);
+            this.btnCambiarEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
-            this.btnCambiarEstado.Size = new System.Drawing.Size(125, 47);
+            this.btnCambiarEstado.Size = new System.Drawing.Size(94, 38);
             this.btnCambiarEstado.TabIndex = 10;
             this.btnCambiarEstado.Text = " Entregar";
             this.btnCambiarEstado.UseVisualStyleBackColor = false;
@@ -199,11 +199,12 @@
             this.fechaRegistro,
             this.estado});
             this.dgvPedidosPagados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvPedidosPagados.Location = new System.Drawing.Point(6, 73);
+            this.dgvPedidosPagados.Location = new System.Drawing.Point(4, 59);
+            this.dgvPedidosPagados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPedidosPagados.Name = "dgvPedidosPagados";
             this.dgvPedidosPagados.RowHeadersWidth = 51;
             this.dgvPedidosPagados.RowTemplate.Height = 24;
-            this.dgvPedidosPagados.Size = new System.Drawing.Size(793, 274);
+            this.dgvPedidosPagados.Size = new System.Drawing.Size(595, 223);
             this.dgvPedidosPagados.TabIndex = 1;
             this.dgvPedidosPagados.SelectionChanged += new System.EventHandler(this.dgvPedidosPagados_SelectionChanged);
             // 
@@ -259,9 +260,10 @@
             this.panelCambioEstado.Controls.Add(this.btnAtras);
             this.panelCambioEstado.Controls.Add(this.panel1);
             this.panelCambioEstado.Controls.Add(this.pictureBox1);
-            this.panelCambioEstado.Location = new System.Drawing.Point(-217, 0);
+            this.panelCambioEstado.Location = new System.Drawing.Point(-163, 0);
+            this.panelCambioEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCambioEstado.Name = "panelCambioEstado";
-            this.panelCambioEstado.Size = new System.Drawing.Size(1104, 508);
+            this.panelCambioEstado.Size = new System.Drawing.Size(828, 413);
             this.panelCambioEstado.TabIndex = 13;
             // 
             // panel2
@@ -269,9 +271,10 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(834, 438);
+            this.panel2.Location = new System.Drawing.Point(626, 356);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 58);
+            this.panel2.Size = new System.Drawing.Size(184, 47);
             this.panel2.TabIndex = 16;
             // 
             // label1
@@ -279,10 +282,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(110, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(82, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "(044) 678102";
             // 
@@ -291,19 +293,20 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(4, 5);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 16);
+            this.label5.Size = new System.Drawing.Size(153, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Av. España 1970, Trujillo, Peru";
             // 
             // FormEstadoPedido2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 508);
+            this.ClientSize = new System.Drawing.Size(665, 413);
             this.Controls.Add(this.panelCambioEstado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormEstadoPedido2";
             this.Text = "Cambiar Estado del Pedido";
             this.Load += new System.EventHandler(this.FormEstadoPedido2_Load_1);

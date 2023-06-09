@@ -1,4 +1,4 @@
-﻿using CapaDatos;
+﻿//using CapaDatos;
 using CapaEntidad;
 using CapaLogica;
 using System;

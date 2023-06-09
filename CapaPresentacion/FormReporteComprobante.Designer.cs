@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteComprobante));
             this.comprobanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDWILSONDataSet = new CapaPresentacion.BDWILSONDataSet();
@@ -130,9 +130,9 @@
             // 
             // reporteComprobante
             // 
-            reportDataSource2.Name = "ReporteComprobante";
-            reportDataSource2.Value = this.comprobanteBindingSource;
-            this.reporteComprobante.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ReporteComprobante";
+            reportDataSource1.Value = this.comprobanteBindingSource;
+            this.reporteComprobante.LocalReport.DataSources.Add(reportDataSource1);
             this.reporteComprobante.LocalReport.ReportEmbeddedResource = "CapaPresentacion.ReporteComprobante.rdlc";
             this.reporteComprobante.Location = new System.Drawing.Point(277, 63);
             this.reporteComprobante.Name = "reporteComprobante";
@@ -183,6 +183,7 @@
             this.Controls.Add(this.dtInicio);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormReporteComprobante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReporteComprobante";
