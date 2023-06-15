@@ -43,6 +43,7 @@ namespace CapaPresentacion
             this.dgvCatMetodoPago = new System.Windows.Forms.DataGridView();
             this.txtCodigoCatMetodoPago = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.gbListaCatMetodoPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatMetodoPago)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +86,7 @@ namespace CapaPresentacion
             // txtNombreCatMetodoPago
             // 
             this.txtNombreCatMetodoPago.BackColor = System.Drawing.Color.White;
-            this.txtNombreCatMetodoPago.ForeColor = System.Drawing.Color.White;
+            this.txtNombreCatMetodoPago.ForeColor = System.Drawing.Color.Black;
             this.txtNombreCatMetodoPago.Location = new System.Drawing.Point(36, 84);
             this.txtNombreCatMetodoPago.Name = "txtNombreCatMetodoPago";
             this.txtNombreCatMetodoPago.Size = new System.Drawing.Size(209, 20);
@@ -116,7 +117,7 @@ namespace CapaPresentacion
             this.btn_EliminarCatMetodoPago.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.btn_EliminarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_EliminarCatMetodoPago.Location = new System.Drawing.Point(479, 58);
+            this.btn_EliminarCatMetodoPago.Location = new System.Drawing.Point(488, 58);
             this.btn_EliminarCatMetodoPago.Name = "btn_EliminarCatMetodoPago";
             this.btn_EliminarCatMetodoPago.Size = new System.Drawing.Size(86, 34);
             this.btn_EliminarCatMetodoPago.TabIndex = 19;
@@ -175,6 +176,7 @@ namespace CapaPresentacion
             // txtCodigoCatMetodoPago
             // 
             this.txtCodigoCatMetodoPago.BackColor = System.Drawing.Color.White;
+            this.txtCodigoCatMetodoPago.Enabled = false;
             this.txtCodigoCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.txtCodigoCatMetodoPago.Location = new System.Drawing.Point(36, 38);
             this.txtCodigoCatMetodoPago.Name = "txtCodigoCatMetodoPago";
@@ -198,12 +200,30 @@ namespace CapaPresentacion
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(163)))), ((int)(((byte)(7)))));
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(600, 58);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(86, 34);
+            this.btnLimpiar.TabIndex = 23;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // FormCategoriaMetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(802, 426);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtCodigoCatMetodoPago);
             this.Controls.Add(this.gbListaCatMetodoPago);
@@ -235,5 +255,6 @@ namespace CapaPresentacion
         private DataGridView dgvCatMetodoPago;
         private TextBox txtCodigoCatMetodoPago;
         private Button btnSalir;
+        private Button btnLimpiar;
     }
 }

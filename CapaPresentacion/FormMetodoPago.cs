@@ -1,6 +1,4 @@
-﻿//using CapaEntidad;
-//using CapaLogica;
-using CapaEntidad;
+﻿using CapaEntidad;
 using CapaLogica;
 using System;
 using System.Collections.Generic;
@@ -159,6 +157,11 @@ namespace CapaPresentacion
         private void Salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarVariables();
         }
     }
 }

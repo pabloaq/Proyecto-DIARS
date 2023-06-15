@@ -1,7 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogica;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -55,10 +54,9 @@ namespace CapaPresentacion
         {
             try
             {
-                if(txtCodigoCatMetodoPago.Text != "" && txtNombreCatMetodoPago.Text != "")
+                if(txtNombreCatMetodoPago.Text != "")
                 {
                     EntCategoriaMetodoPago categoriaMetodoPago = new EntCategoriaMetodoPago();
-                    categoriaMetodoPago.IdCategoriaMetodoPago = txtCodigoCatMetodoPago.Text;
                     categoriaMetodoPago.Nombre= txtNombreCatMetodoPago.Text;
 
                     LogCategoriaMetodoPago.Instancia.InsertarCategoriaMetodoPago(categoriaMetodoPago);
@@ -119,6 +117,11 @@ namespace CapaPresentacion
         private void btn_EliminarCatMetodoPago_MouseLeave(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarVariables();
         }
     }
 }

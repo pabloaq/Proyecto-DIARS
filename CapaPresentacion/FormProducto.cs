@@ -1,5 +1,4 @@
-﻿using CapaDatos;
-using CapaEntidad;
+﻿using CapaEntidad;
 using CapaLogica;
 using System;
 using System.Collections.Generic;

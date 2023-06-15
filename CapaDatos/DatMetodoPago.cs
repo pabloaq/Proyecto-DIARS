@@ -76,7 +76,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("spInsertarMetodoPago", cn);
                 cmd.CommandType= CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@IdMetodoPago", metodoPago.idMetodoPago);
                 cmd.Parameters.AddWithValue("@IdCategoriaMetodoPago", metodoPago.idCategoriaMetodoPago);
                 cmd.Parameters.AddWithValue("@nombre", metodoPago.nombre);
 
