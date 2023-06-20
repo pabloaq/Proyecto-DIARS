@@ -40,6 +40,7 @@ namespace CapaPresentacion
             cmbProducto.SelectedIndex = -1;
             cantidadProducto = 1;
             lbCantidadProducto.Text = "1";
+            txtNombreClienteDP.Text = string.Empty;
         }
 
         private void listarComboBoxTipoPedido()
